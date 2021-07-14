@@ -1,0 +1,34 @@
+form {
+  position: relative;
+  text-align: center; /* Centre le titre, le paragraphe et le bouton */
+  background: #f6f6f6;
+  label {
+    position: absolute;
+    line-height: 50px; /* La hauteur étant identique à celle de l'input, "top: 0" centre l'élément */
+    top: 0;
+    left: 27%; /* Pour s'adapter à toutes les résolutions */
+    color: $couleur-inp;
+  }
+  input {
+    padding: 0 0 0 35%; /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
+    width: 65%;
+    line-height: 50px;
+    background: #eaeaea;  
+    border: none;
+    box-shadow: inset 0px 6px 8px -9px rgba(0,0,0,0.63);
+    font-family: $font-roboto;
+    font-size: 1em;
+    font-weight: 500;
+    color: $couleur-inp;
+  }
+  h1 {
+    font-size: 1.5em;
+    margin: 40px 15% 0 15%;
+  } 
+  p {
+    font-size: 1.1em;
+    margin: 15px 10% 0 10%;
+    font-weight: 300;
+  }
+}
+  

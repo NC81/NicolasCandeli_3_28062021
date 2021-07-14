@@ -1,0 +1,44 @@
+.rest {
+  padding: 55px 5% 60px 5%;
+  background: #f6f6f6;
+  h1 {
+    margin: 0 0 5px 0;
+  }
+  .rest-flex {
+    display: flex;
+    flex-direction: column;
+  }  
+  .rest-lien {
+    margin-top: 18px;
+    border-radius: 20px;
+    @include ombre-lien;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      @include pri-clair;
+    }
+    &__fig {
+      margin: 0;
+    }
+    &__img {
+      width: 100%;
+      height: 175px;
+      object-fit: cover;
+    }
+  }
+}
+  
+.rest-lien__descr {
+  padding: 10px 0 14px 13px;
+  h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.06em;   
+  }
+  p {
+    margin: 0;
+    font-weight: 300;
+  }  
+}  
+
+
+  

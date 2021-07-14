@@ -1,0 +1,50 @@
+.fonct {
+  padding: 50px 5% 70px 5%;
+  .fonct-liste {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    &__titre {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    &__li {
+      margin-top: 24px;
+      margin-left: 12px;
+    }
+  }  
+  .fonct-lien {
+    @include ombre-lien;
+    display: inline-block;
+    line-height: 74px; 
+    font-weight: 500;
+    width: 100%;
+    border-radius: 20px;
+    background: #f6f6f6;
+    &--pri-clair {
+      @include pri-clair;
+    }
+    &__cercle {
+      display: inline-block;
+      position: relative;
+      left: -12px;
+      text-align: center;
+      line-height: 25px;
+      width: 25px;
+      background: $couleur-pri;
+      color: white;
+      border-radius: 50%;
+      font-size: .8em;
+    }
+    &__icone {
+      margin-left: 12px;
+      margin-right: 27px;
+      color: #7e7e7e;
+      &--pri {
+        color: $couleur-pri;
+      }
+    }
+  }
+}

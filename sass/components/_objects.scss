@@ -1,0 +1,15 @@
+.rest-lien__aime {
+    @include icone-aime;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.menu-page__aime {
+    @include icone-aime;
+    line-height: 50px;
+}
+
+.rest-lien__info {
+    @include icone-nouv;
+}

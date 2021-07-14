@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAEI,MAFE,CAED,UAAK,CAAC;EACP,WAAW,EAAE,IAAI;CAChB;;ACJL,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,oBAAoB;EACjC,MAAM,EAAE,CAAC;CACZ;;AAED,AAAA,MAAM,CAAC;EACH,WAAW,EAAE,oBAAoB;EACjC,SAAS,EAAE,IAAI;CAClB",
+    "sources": [
+        "main.scss",
+        "utils/_variables.scss",
+        "layouts/_header.scss",
+        "base/_base.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
