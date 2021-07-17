@@ -1,15 +1,25 @@
+.header__logo {
+  display: block;
+  width: 165px; /* Pour correspondre à la maquette */
+  margin: 23px auto 11px auto;
+  @include desk-min {
+    width: initial;
+    margin: 50px auto 50px auto;
+  }
+} 
+  
 .rest-lien__aime {
-    @include icone-aime;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
+  @include icone-aime;
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 
-.menu-page__aime {
-    @include icone-aime;
-    line-height: 50px;
+.menu-titre__aime {
+  @include icone-aime;
+  line-height: 42px;
 }
 
 .rest-lien__info {
-    @include icone-nouv;
+  @include icone-nouv;
 }

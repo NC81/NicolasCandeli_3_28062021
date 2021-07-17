@@ -1,10 +1,12 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/maps";
+@import "./layouts/bloc-page";
 @import "./layouts/header";
-@import "./layouts/section-fonct";
+@import "./layouts/sAccueil-fonc";
+@import "./layouts/sAccueil-rest";
+@import "./layouts/sMenu";
 @import "./layouts/form";
-@import "./layouts/section-menu";
-@import "./layouts/section-rest";
 @import "./layouts/footer";
 @import "./base/base";
 @import "./components/boutons";

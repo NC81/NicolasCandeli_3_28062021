@@ -1,6 +1,6 @@
 .footer {
   background: #353535;
-  padding: 20px 0 30px 22px;
+  padding: 20px 0 30px 5%;
   ul {
     list-style-type: none;
     margin: 0;
@@ -26,4 +26,8 @@
       font-weight: 500;
     }
   }
+}
+
+.fAccueil {
+  width: 95%;
 }

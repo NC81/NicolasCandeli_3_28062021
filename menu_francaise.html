@@ -17,29 +17,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body>
+    <body class="body">
         <!-- EN-TÊTE -->
         <header>
             <div class="logo"> 
                 <img src="./images/logo.svg" alt="Logo Ohmyfood!" class="header__logo" />
-                <a  href="index.html" class="header__btn"><i class="fas fa-arrow-left"></i></a>   
-            </div>
-            <div>
-                <img src="./images/restaurants/l_la-francaise.jpg" alt="À la française" class="header__img" />
+                <a  href="index.html" class="btn-retour"><i class="fas fa-arrow-left"></i></a>   
             </div>
         </header>
         <!-- SECTION - MENU -->
-        <section class="menu-page">
-            <div class="menu-page__flex">
-                <div class="menu-page__titre">À la française</div>
-                <i class="menu-page__aime far fa-heart"></i>
+        <div class="bloc-menu"><section class="sMenu">
+            <div class="menu-titre">
+                <div class="menu-titre__txt">À la française</div>
+                <i class="menu-titre__aime far fa-heart"></i>
             </div>
-            <ul class="menu-liste">
+            <div class="menu-flex">
+              <ul class="menu-liste">
                 <div class="menu-liste__titre">ENTRÉES<div class="menu-liste__separ"></div></div>
                 <li><a class="menu-lien" href="#vide">
                     <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
                     <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
+                        <span class="menu-lien__compo">Au piment d'Espelette et à la truffe noire</span>
                         <span class="menu-lien__prix">25€</span>
                     </p>
                 </a></li>
@@ -105,9 +103,10 @@
                         <span class="menu-lien__prix">25€</span>
                     </p>
                 </a></li>
-            </ul>  
-            <div class="menu__btn">Commander</div>
-        </section>
+            </ul>
+            </div>  
+            <button class="btn btn-menu">Commander</button>
+        </section></div>
         <!-- PIED DE PAGE -->
         <footer class="footer">
             <div class="footer__logo">ohmyfood</div>

@@ -1,35 +1,74 @@
 @charset "UTF-8";
-.header__logo {
-  display: block;
-  width: 165px;
-  margin: 23px auto 11px auto;
+@media all and (min-width: 1366px) {
+  .bloc-accueil {
+    width: 94%;
+    max-width: 1400px;
+    min-height: 93vh;
+  }
 }
 
-.header__img {
-  width: 100%;
-  height: 255px;
-  object-fit: cover;
+.bloc-menu {
+  background-image: url("http://127.0.0.1:5500/images/restaurants/200_la-francaise.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding-top: 200px;
+}
+@media all and (min-width: 768px) {
+  .bloc-menu {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media all and (min-width: 1366px) {
+  .bloc-menu {
+    background-size: cover;
+    padding: 12% 0 5% 0;
+    min-height: 62vh;
+  }
 }
 
-.fonct {
+@media all and (min-width: 768px) {
+  .header-flex {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 50px 5% 50px 5%;
+  }
+}
+@media all and (min-width: 1366px) {
+  .header-flex {
+    padding: 30px 0 50px 5%;
+  }
+}
+
+.sFonct {
   padding: 50px 5% 70px 5%;
 }
-.fonct .fonct-liste {
+@media all and (min-width: 768px) {
+  .sFonct {
+    width: 42%;
+    padding: 0;
+  }
+}
+@media all and (min-width: 1366px) {
+  .sFonct {
+    width: 32%;
+  }
+}
+.sFonct .fonct-liste {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.fonct .fonct-liste__titre {
-  margin-top: 0;
-  margin-bottom: 5px;
+.sFonct .fonct-liste__titre {
+  margin: 0 0 5px 0;
 }
-.fonct .fonct-liste__li {
-  margin-top: 24px;
-  margin-left: 12px;
+.sFonct .fonct-liste__li {
+  margin: 24px 0 0 12px;
 }
-.fonct .fonct-lien {
+.sFonct .fonct-lien {
   box-shadow: 2px 5px 13px -1px rgba(35, 35, 35, 0.13);
   display: inline-block;
   line-height: 74px;
@@ -38,10 +77,10 @@
   border-radius: 20px;
   background: #f6f6f6;
 }
-.fonct .fonct-lien--pri-clair {
+.sFonct .fonct-lien--pri-clair {
   background: #f2eafb;
 }
-.fonct .fonct-lien__cercle {
+.sFonct .fonct-lien__cercle {
   display: inline-block;
   position: relative;
   left: -12px;
@@ -53,88 +92,146 @@
   border-radius: 50%;
   font-size: 0.8em;
 }
-.fonct .fonct-lien__icone {
+.sFonct .fonct-lien__icone {
   margin-left: 12px;
   margin-right: 27px;
-  color: #7e7e7e;
+  color: #777777;
 }
-.fonct .fonct-lien__icone--pri {
+.sFonct .fonct-lien__icone--pri {
   color: #9356DC;
 }
 
-form {
-  position: relative;
-  text-align: center;
-  /* Centre le titre, le paragraphe et le bouton */
+.sRest {
+  padding: 55px 5% 60px 5%;
   background: #f6f6f6;
 }
-form label {
-  position: absolute;
-  line-height: 50px;
-  /* La hauteur étant identique à celle de l'input, "top: 0" centre l'élément */
-  top: 0;
-  left: 27%;
-  /* Pour s'adapter à toutes les résolutions */
-  color: #434343;
+@media all and (min-width: 1366px) {
+  .sRest {
+    border-radius: 30px;
+    margin-bottom: 80px;
+  }
 }
-form input {
-  padding: 0 0 0 35%;
-  /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
-  width: 65%;
-  line-height: 50px;
-  background: #eaeaea;
-  border: none;
-  box-shadow: inset 0px 6px 8px -9px rgba(0, 0, 0, 0.63);
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
-  font-weight: 500;
-  color: #434343;
+.sRest h1 {
+  margin: 0 0 5px 0;
 }
-form h1 {
-  font-size: 1.5em;
-  margin: 40px 15% 0 15%;
+.sRest .rest-flex {
+  display: flex;
+  flex-direction: column;
 }
-form p {
-  font-size: 1.1em;
-  margin: 15px 10% 0 10%;
+@media all and (min-width: 768px) {
+  .sRest .rest-flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+.sRest .rest-lien {
+  box-shadow: 2px 5px 13px -1px rgba(35, 35, 35, 0.13);
+  margin-top: 18px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+@media all and (min-width: 768px) {
+  .sRest .rest-lien {
+    width: 32%;
+    margin-top: 30px;
+  }
+}
+@media all and (min-width: 1366px) {
+  .sRest .rest-lien {
+    width: 22%;
+  }
+}
+.sRest .rest-lien:hover {
+  background: #f2eafb;
+}
+.sRest .rest-lien__fig {
+  margin: 0;
+}
+.sRest .rest-lien__img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+@media all and (min-width: 1366px) {
+  .sRest .rest-lien__img {
+    height: 350px;
+  }
+}
+
+.rest-lien__descr {
+  padding: 10px 0 14px 13px;
+}
+.rest-lien__descr h2 {
+  margin: 0 0 5px 0;
+  font-size: 1.06em;
+}
+.rest-lien__descr p {
+  margin: 0;
   font-weight: 300;
 }
 
-.menu-page {
-  position: relative;
+.sMenu {
   background: #f6f6f6;
-  padding: 15px 4% 85px 4%;
+  padding: 30px 5% 82px 5%;
+  border-radius: 40px 40px 0 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  /* Pour que max-width contienne le padding */
+  max-width: 1400px;
 }
-.menu-page__flex {
-  position: absolute;
+@media all and (min-width: 1366px) {
+  .sMenu {
+    width: 90%;
+    border-radius: 40px;
+  }
+}
+.sMenu .menu-titre {
   display: flex;
   justify-content: space-between;
-  top: -50px;
-  left: 0;
-  width: 85%;
-  line-height: 50px;
-  /* Correspond au décalage vers le haut pour ne pas créer d'espace vide */
-  padding: 30px 10% 0 5%;
+  padding: 0 7% 0 0;
   background: #f6f6f6;
   border-radius: 30px 30px 0 0;
 }
-.menu-page__titre {
+.sMenu .menu-titre__txt {
   font-family: "Shrikhand";
-  font-size: 1.9em;
+  font-size: 1.8em;
 }
 
-.menu-liste {
+@media all and (min-width: 768px) {
+  .menu-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+}
+.menu-flex .menu-liste {
   list-style-type: none;
   font-weight: 300;
-  margin-top: 42px;
+  margin: 42px 0 0 0;
   padding: 0;
 }
-.menu-liste__titre {
+@media all and (min-width: 768px) {
+  .menu-flex .menu-liste {
+    flex: 1 1 338px;
+    max-width: 49%;
+    /* "gap: 2%" diminue la taille des flex-items de 1%, une valeur de 49% permet d'obtenir la même largeur maximum */
+  }
+}
+@media all and (min-width: 1366px) {
+  .menu-flex .menu-liste {
+    width: 31%;
+  }
+}
+.menu-flex .menu-liste__titre {
   margin-left: 5px;
 }
-.menu-liste__separ {
+.menu-flex .menu-liste__separ {
   border-bottom: 3px solid #99E2D0;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   width: 40px;
 }
 
@@ -165,51 +262,86 @@ form p {
   font-weight: 500;
 }
 
-.rest {
-  padding: 55px 5% 60px 5%;
-  background: #f6f6f6;
-}
-.rest h1 {
-  margin: 0 0 5px 0;
-}
-.rest .rest-flex {
-  display: flex;
-  flex-direction: column;
-}
-.rest .rest-lien {
-  margin-top: 18px;
-  border-radius: 20px;
-  box-shadow: 2px 5px 13px -1px rgba(35, 35, 35, 0.13);
-  overflow: hidden;
+form {
   position: relative;
+  text-align: center;
+  /* Centre le titre, le paragraphe (et l'input en responsive) */
+  background: #f6f6f6;
+  padding-bottom: 55px;
 }
-.rest .rest-lien:hover {
-  background: #f2eafb;
+@media all and (min-width: 768px) {
+  form {
+    border-radius: 30px;
+    width: 53%;
+  }
 }
-.rest .rest-lien__fig {
-  margin: 0;
+@media all and (min-width: 1366px) {
+  form {
+    width: 60%;
+  }
 }
-.rest .rest-lien__img {
-  width: 100%;
-  height: 175px;
-  object-fit: cover;
+form label {
+  position: absolute;
+  line-height: 50px;
+  /* La hauteur étant identique à celle de l'input, "top: 0" centre l'élément */
+  top: 0;
+  left: 27%;
+  color: #444444;
 }
-
-.rest-lien__descr {
-  padding: 10px 0 14px 13px;
+@media all and (min-width: 768px) {
+  form label {
+    left: 23%;
+  }
 }
-.rest-lien__descr h2 {
-  margin: 0 0 5px 0;
-  font-size: 1.06em;
+@media all and (min-width: 1366px) {
+  form label {
+    left: 36%;
+  }
 }
-.rest-lien__descr p {
-  margin: 0;
+form input {
+  padding: 0 0 0 35%;
+  /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
+  width: 65%;
+  line-height: 50px;
+  background: #EAEAEA;
+  border: none;
+  box-shadow: inset 0px 6px 8px -9px rgba(0, 0, 0, 0.63);
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #444444;
+}
+@media all and (min-width: 768px) {
+  form input {
+    border-radius: 30px 30px 0 0;
+    padding: 0 25% 0 30%;
+    width: 45%;
+  }
+}
+@media all and (min-width: 1366px) {
+  form input {
+    padding: 0 30% 0 40%;
+    width: 30%;
+  }
+}
+form h1 {
+  font-size: 1.5em;
+  margin: 40px 15% 0 15%;
+}
+@media all and (min-width: 1366px) {
+  form h1 {
+    margin-top: 50px;
+  }
+}
+form p {
+  font-size: 1.1em;
+  margin: 15px 10% 0 10%;
   font-weight: 300;
 }
 
 .footer {
   background: #353535;
-  padding: 20px 0 30px 22px;
+  padding: 20px 0 30px 5%;
 }
 .footer ul {
   list-style-type: none;
@@ -237,9 +369,21 @@ form p {
   font-weight: 500;
 }
 
-body {
+.fAccueil {
+  width: 95%;
+}
+
+.body {
   font-family: "Roboto", sans-serif;
   margin: 0;
+}
+
+@media all and (min-width: 1366px) {
+  .bAccueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 a {
@@ -247,41 +391,70 @@ a {
   text-decoration: none;
 }
 
-.form__bouton {
+.btn {
+  display: block;
   line-height: 50px;
-  text-align: center;
-  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  /* Par défaut les boutons ont un padding */
+  background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
   border: none;
   border-radius: 25px;
   box-shadow: 0px 5px 8px -3px rgba(35, 35, 35, 0.5);
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 1em;
-  width: 220px;
-  margin: 30px 0 55px 0;
 }
 
-.menu__btn {
-  line-height: 50px;
-  text-align: center;
-  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
-  border: none;
-  border-radius: 25px;
-  box-shadow: 0px 5px 8px -3px rgba(35, 35, 35, 0.5);
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 1em;
+.btn-form {
+  width: 220px;
+  margin-top: 30px;
+}
+@media all and (min-width: 768px) {
+  .btn-form {
+    min-width: 219px;
+    width: 45%;
+    margin-top: 35px;
+  }
+}
+
+.btn-menu {
   width: 165px;
   margin: 50px auto 0 auto;
 }
+@media all and (min-width: 1366px) {
+  .btn-menu {
+    width: 31%;
+  }
+}
 
-.header__btn {
+.btn-retour {
   position: absolute;
   left: 0;
   top: 0;
   font-size: 1.1em;
   line-height: 63px;
-  padding-left: 22px;
+  /* Correspond à la hauteur du logo avec marges */
+  padding: 0 2% 0 5%;
+}
+@media all and (min-width: 1366px) {
+  .btn-retour {
+    line-height: 134px;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 165px;
+  /* Pour correspondre à la maquette */
+  margin: 23px auto 11px auto;
+}
+@media all and (min-width: 1366px) {
+  .header__logo {
+    width: initial;
+    margin: 50px auto 50px auto;
+  }
 }
 
 .rest-lien__aime {
@@ -292,10 +465,10 @@ a {
   right: 25px;
 }
 
-.menu-page__aime {
+.menu-titre__aime {
   font-size: 1.5em;
   font-weight: 100;
-  line-height: 50px;
+  line-height: 42px;
 }
 
 .rest-lien__info {

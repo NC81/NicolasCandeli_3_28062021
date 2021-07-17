@@ -1,29 +1,55 @@
 form {
   position: relative;
-  text-align: center; /* Centre le titre, le paragraphe et le bouton */
-  background: #f6f6f6;
+  text-align: center; /* Centre le titre, le paragraphe (et l'input en responsive) */
+  background: $clr-qua;
+  padding-bottom: 55px;
+  @include tabl-min {
+    border-radius: 30px;
+    width: 53%;
+  }
+  @include desk-min {
+    width: 60%;
+  }
   label {
     position: absolute;
     line-height: 50px; /* La hauteur étant identique à celle de l'input, "top: 0" centre l'élément */
     top: 0;
-    left: 27%; /* Pour s'adapter à toutes les résolutions */
-    color: $couleur-inp;
+    left: 27%; 
+    color: darken($clr-inp, 65);
+    @include tabl-min {
+      left: 23%;
+    }
+    @include desk-min {
+      left: 36%;
+    }
   }
   input {
     padding: 0 0 0 35%; /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
     width: 65%;
     line-height: 50px;
-    background: #eaeaea;  
+    background: $clr-inp;  
     border: none;
     box-shadow: inset 0px 6px 8px -9px rgba(0,0,0,0.63);
     font-family: $font-roboto;
     font-size: 1em;
     font-weight: 500;
-    color: $couleur-inp;
+    color: darken($clr-inp, 65);
+    @include tabl-min {
+      border-radius: 30px 30px 0 0;
+      padding: 0 25% 0 30%;
+      width: 45%;
+    }
+    @include desk-min {
+      padding: 0 30% 0 40%;
+      width: 30%;
+    }
   }
   h1 {
     font-size: 1.5em;
     margin: 40px 15% 0 15%;
+    @include desk-min {
+      margin-top: 50px
+    }
   } 
   p {
     font-size: 1.1em;
@@ -31,4 +57,3 @@ form {
     font-weight: 300;
   }
 }
-  

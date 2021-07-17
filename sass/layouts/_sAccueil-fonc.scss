@@ -1,5 +1,12 @@
-.fonct {
+.sFonct {
   padding: 50px 5% 70px 5%;
+  @include tabl-min {
+    width: 42%;
+    padding: 0;
+  }
+  @include desk-min {
+    width: 32%
+  }
   .fonct-liste {
     display: flex;
     flex-direction: column;
@@ -7,12 +14,10 @@
     margin: 0;
     padding: 0;
     &__titre {
-      margin-top: 0;
-      margin-bottom: 5px;
+      margin: 0 0 5px 0;
     }
     &__li {
-      margin-top: 24px;
-      margin-left: 12px;
+      margin: 24px 0 0 12px;
     }
   }  
   .fonct-lien {
@@ -22,7 +27,7 @@
     font-weight: 500;
     width: 100%;
     border-radius: 20px;
-    background: #f6f6f6;
+    background: $clr-qua;
     &--pri-clair {
       @include pri-clair;
     }
@@ -33,7 +38,7 @@
       text-align: center;
       line-height: 25px;
       width: 25px;
-      background: $couleur-pri;
+      background: $clr-pri;
       color: white;
       border-radius: 50%;
       font-size: .8em;
@@ -41,9 +46,9 @@
     &__icone {
       margin-left: 12px;
       margin-right: 27px;
-      color: #7e7e7e;
+      color: darken($clr-qua, 50);
       &--pri {
-        color: $couleur-pri;
+        color: $clr-pri;
       }
     }
   }
