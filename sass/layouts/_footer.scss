@@ -1,33 +1,36 @@
-.footer {
+.ftr {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 25px 0 35px 0;
   background: #353535;
-  padding: 20px 0 30px 5%;
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  &__logo {
-    font-family: $font-logo;
-    color: white;
-    font-size: 1.1em;
-    margin-bottom: 16px;
-  }
-  li {
-    margin-top:5px;  
-  }
-  &__icone {
-    font-size: .7em;
-    margin-right: 10px;
-  }
-  &__lien {
-    font-size: 1em;
-    color: white;
-    &--gras {
-      font-weight: 500;
+  &Cont {
+    width: 90%;
+    max-width: 1400px;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    &__titre {
+      font-family: $ft-logo;
+      color: white;
+      font-size: 1.1em;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-top:5px;  
+    }
+    &__icone {
+      font-size: .7em;
+      margin-right: 10px;
+    }
+    &__lien {
+      font-size: 1em;
+      color: white;
+      &--gras {
+        font-weight: 500;
+      }
     }
   }
-}
-
-.fAccueil {
-  width: 95%;
 }

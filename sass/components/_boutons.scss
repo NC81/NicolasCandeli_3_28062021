@@ -1,16 +1,32 @@
 .btn {
   display: block;
+  position: relative;
   line-height: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 0; /* Par défaut les boutons ont un padding */
-  background: linear-gradient(176deg, $clr-sec 0%, $clr-pri 100%);
+  background: $clr-btn;
   border: none;
   border-radius: 25px;
-  box-shadow: 0px 5px 8px -3px rgba(35, 35, 35, 0.5);
+  box-shadow: $obr-btn;
   color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 1em;    
+  font-size: 1em;   
+  z-index: 1;
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    @include after;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 25px;
+    background: $clr-btn-survol;
+    box-shadow: $obr-btn-survol; /* Mêmes valeurs que sur .btn avec une opacité plus faible */
+    transition: opacity .5s;
+  }  
 }
 
 .btn-form {
@@ -40,5 +56,58 @@
   padding: 0 2% 0 5%; 
   @include desk-min {
     line-height: 134px;
+  }
+}
+
+.btn-coeur {
+  &__vi {
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 100;
+    z-index: 2;
+  }
+  &__pl {
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    color: $clr-sec;
+  }
+  &:hover {
+    &::after {
+    transform: scaleY(0);
+    }
+  } 
+  &::after {
+    @include after;
+    opacity: 1;
+    z-index: 1;
+    display: block;
+    width: 25px;
+    height: 25px;
+    transition: transform 1s;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+.btn-coeur-rest {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;  
+  &::after {
+    background: white;
+  }
+}
+
+.btn-coeur-menu {
+  position: relative;
+  padding-right: 20px;
+  line-height: 42px;
+  &::after {
+    background: $clr-qua;
   }
 }

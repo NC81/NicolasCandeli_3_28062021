@@ -1,8 +1,28 @@
+// Police
+$ft-logo: 'Shrikhand', cursive;
+$ft-roboto: 'Roboto', sans-serif;
+
+// Couleurs
 $clr-pri: #9356DC;
 $clr-sec: #FF79DA;
 $clr-ter: #99E2D0;
 $clr-qua: #f6f6f6;
 $clr-inp: #EAEAEA;
+$clr-pri-cr: lighten($clr-pri, 35);
+$clr-btn: linear-gradient(176deg, $clr-sec 0%, $clr-pri 100%);
+$clr-btn-survol: linear-gradient(176deg, lighten($clr-pri, 7) 0%, lighten($clr-sec, 7) 100%);
 
-$font-logo: 'Shrikhand', cursive;
-$font-roboto: 'Roboto', sans-serif;
+// Ombres
+$obr-lien: 2px 5px 13px -1px rgba(35, 35, 35, 0.13);
+$obr-btn: 0px 5px 8px -3px rgba(35, 35, 35, 0.5);
+$obr-btn-survol: 0px 5px 8px -3px rgba(35, 35, 35, 0.1);
+
+// Animation
+$oh-transYav: -10%;
+$oh-transYap: -15%;
+$oh-scale: 2;
+$my-scaleX: .6;
+$my-scaleY: 1.4;
+$my-transXdr: 50%;
+$my-transXga: -50%;
+$my-transY: 8%;

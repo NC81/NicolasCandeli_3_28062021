@@ -8,18 +8,15 @@
   }
 } 
   
-.rest-lien__aime {
-  @include icone-aime;
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
-}
-
-.menu-titre__aime {
-  @include icone-aime;
-  line-height: 42px;
-}
-
 .rest-lien__info {
-  @include icone-nouv;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  line-height: 30px;
+  width: 80px;
+  background: $clr-ter;
+  color: darken($clr-ter, 42%);
+  text-align: center;
+  font-size: .9em;
+  font-weight: 500;
 }

@@ -18,7 +18,7 @@
     }
   }  
   .rest-lien {
-    @include ombre-lien;
+    box-shadow: $obr-lien;
     margin-top: 18px;
     border-radius: 20px;
     overflow: hidden;
@@ -30,13 +30,12 @@
     @include desk-min {
       width: 22%;
     }
-    &:hover {
-      @include pri-clair;
-    }
     &__fig {
+      position: relative;
       margin: 0;
     }
     &__img {
+      display: block;
       width: 100%;
       height: 175px;
       object-fit: cover;
@@ -45,10 +44,10 @@
       }
     }
   }
-}
-  
+}  
+
 .rest-lien__descr {
-  padding: 10px 0 14px 13px;
+  padding: 18px 0 18px 13px;
   h2 {
     margin: 0 0 5px 0;
     font-size: 1.06em;   

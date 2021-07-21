@@ -54,17 +54,15 @@
 }    
 
 .menu-lien {
-  @include ombre-lien;
-  display: block;
-  height: 50px;
-  border-radius: 16px;
-  padding: 15px 22px 10px 10px;
-  margin-top: 16px;
-  background: white;
   &__titre {
     font-size: 1.1em;
     font-weight: 500;
     margin: 0;
+    transition: width .6s;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   &__flex {
     display: flex;
@@ -74,8 +72,82 @@
   } 
   &__compo {
     font-weight: 300;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width .6s;
+    width: 100%;
   }
   &__prix {
     font-weight: 500;  
+    transition: transform .5s .05s;
+    transform: translateX(0);
   }
+} 
+
+.menu-li{
+  display: flex;
+  box-shadow: $obr-lien;
+  position: relative;
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+  height: 45px;
+  margin-top: 16px;
+  padding: 15px 22px 10px 10px;
+  animation: delai 1s;
+  animation-fill-mode: backwards;
+  @for $n from 1 through 5 {
+    &--#{$n} {
+      animation-delay: .15s * $n;
+    }
+  }
+  &:hover {
+    .menu-lien__titre {
+      width: calc(100% - 70px);
+    }
+    .menu-lien__compo {
+      width: calc(100% - 100px);
+    }
+    .menu-lien__prix {
+      transform: translateX(-70px)
+    }
+    .reserv {
+      transform: translateX(-70px);
+    }
+    .reserv .fas {
+      animation: valid .5s;
+      animation-fill-mode: none;
+    }
+  }
+  .menu-lien {
+    width: 100%;
+  }
+  .reserv {
+    position: absolute;
+    background: $clr-ter;
+    right: -70px; 
+    top: 0; 
+    width: 70px;
+    height: 70px;
+    transition: transform .5s;
+    transform: translateX(0);
+    text-align: center;
+    .fas {
+      color: white;
+      font-size: 1.7em;
+      line-height: 70px;
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@keyframes valid {
+  from {transform: rotate(-360deg);}
+  to {transform: rotate(0);}
+}
+
+@keyframes delai {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

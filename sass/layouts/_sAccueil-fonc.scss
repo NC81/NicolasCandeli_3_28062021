@@ -1,8 +1,9 @@
 .sFonct {
   padding: 50px 5% 70px 5%;
   @include tabl-min {
-    width: 42%;
+    width: 43%;
     padding: 0;
+    max-width: 415px;
   }
   @include desk-min {
     width: 32%
@@ -21,16 +22,15 @@
     }
   }  
   .fonct-lien {
-    @include ombre-lien;
+    position: relative;
+    box-shadow: $obr-lien;
     display: inline-block;
     line-height: 74px; 
     font-weight: 500;
     width: 100%;
     border-radius: 20px;
     background: $clr-qua;
-    &--pri-clair {
-      @include pri-clair;
-    }
+    z-index: 1;
     &__cercle {
       display: inline-block;
       position: relative;
@@ -47,9 +47,21 @@
       margin-left: 12px;
       margin-right: 27px;
       color: darken($clr-qua, 50);
-      &--pri {
+    }
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+      #fi-1, #fi-2, #fi-3 {
         color: $clr-pri;
       }
+    }
+    &::after {
+      @include after;
+      z-index: -1;
+      transition: opacity .5s;
+      border-radius: 20px;
+      background: $clr-pri-cr; 
     }
   }
 }

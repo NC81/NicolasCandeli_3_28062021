@@ -18,6 +18,13 @@
     </head>
     
     <body class="body bAccueil">
+        <div class="loader">
+            <div class="loader-ttr">
+                <div class="loader-1">oh</div><div class="loader-2">my</div>
+                <div class="loader-3"><div class="loader-3__f">f</div><div class="loader-3__o">o</div><div class="loader-3__o">o</div>d</div>
+            </div> 
+       </div>     
+            
         <div class="bloc-accueil">
             <!-- EN-TÊTE -->
             <header>
@@ -30,19 +37,22 @@
                         <p class="form__texte">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                         <button class="btn btn-form">Explorer nos restaurants</button>
                    </form>
-                <!-- SECTION - FONCTIONNEMENT     -->
+                <!-- SECTION - FONCTIONNEMENT -->
                     <section class="sFonct">
                         <h1 class="fonct-liste__titre">Fonctionnement</h1>
                         <ul class="fonct-liste">
-                            <li class="fonct-liste__li"><a class="fonct-lien">
+                            <li class="fonct-liste__li"><a class="fonct-lien" href="#vide">
                                 <div class="fonct-lien__cercle">1</div>
-                                <i class="fonct-lien__icone fas fa-fw fa-mobile-alt"></i>Choisissez un restaurant</a></li>
-                            <li class="fonct-liste__li"><a class="fonct-lien">
+                                <i id="fi-1" class="fonct-lien__icone fas fa-fw fa-mobile-alt"></i>Choisissez un restaurant
+                            </a></li>
+                            <li class="fonct-liste__li"><a class="fonct-lien" href="#vide">
                                 <div class="fonct-lien__cercle">2</div>
-                                <i class="fonct-lien__icone fas fa-fw fa-list-ul"></i>Composez votre menu</a></li>
-                            <li class="fonct-liste__li"><a class="fonct-lien fonct-lien--pri-clair">
+                                <i id="fi-2" class="fonct-lien__icone fas fa-fw fa-list-ul"></i>Composez votre menu
+                            </a></li>
+                            <li class="fonct-liste__li"><a class="fonct-lien" href="#vide">
                                 <div class="fonct-lien__cercle">3</div>
-                                <i class="fonct-lien__icone fonct-lien__icone--pri fas fa-fw fa-store"></i>Dégustez au restaurant</a></li>
+                                <i id="fi-3" class="fonct-lien__icone fas fa-fw fa-store"></i>Dégustez au restaurant
+                            </a></li>
                         </ul>
                     </section>    
                 </div>
@@ -60,7 +70,10 @@
                             </figcaption>
                         </figure>
                         <div class="rest-lien__info">Nouveau</div>
-                        <i class="rest-lien__aime far fa-heart"></i>
+                        <div class="btn-coeur btn-coeur-rest">
+                            <i class="btn-coeur__vi far fa-heart"></i>
+                            <i class="btn-coeur__pl fas fa-heart"></i>
+                        </div>
                     </a>
                     <a class="rest-lien" href="menu_francaise.html">
                         <figure class="rest-lien__fig">
@@ -71,7 +84,10 @@
                             </figcaption>
                         </figure>
                         <div class="rest-lien__info">Nouveau</div>
-                        <i class="rest-lien__aime far fa-heart"></i>
+                        <div class="btn-coeur btn-coeur-rest">
+                            <i class="btn-coeur__vi far fa-heart"></i>
+                            <i class="btn-coeur__pl fas fa-heart"></i>
+                        </div>
                     </a>
                     <a class="rest-lien" href="menu_francaise.html">
                         <figure class="rest-lien__fig">
@@ -81,7 +97,10 @@
                                 <p>Cité Rouge</p>
                             </figcaption>
                         </figure>
-                        <i class="rest-lien__aime far fa-heart"></i>
+                        <div class="btn-coeur btn-coeur-rest">
+                            <i class="btn-coeur__vi far fa-heart"></i>
+                            <i class="btn-coeur__pl fas fa-heart"></i>
+                        </div>
                     </a>
                     <a class="rest-lien" href="menu_francaise.html">
                         <figure class="rest-lien__fig">
@@ -91,21 +110,27 @@
                                 <p>Folie-Méricourt</p>
                             </figcaption>
                         </figure>
-                        <i class="rest-lien__aime far fa-heart"></i>
+                        <div class="btn-coeur btn-coeur-rest">
+                            <i class="btn-coeur__vi far fa-heart"></i>
+                            <i class="btn-coeur__pl fas fa-heart"></i>
+                        </div>
                     </a>    
                 </div>
             </section>
         </div>
         <!-- PIED DE PAGE -->
-        <footer class="footer fAccueil">
-            <div class="footer__logo">ohmyfood</div>
-            <ul>  
-                <li><a class="footer__lien footer__lien--gras" href="#vide"><i class="footer__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
-                <li><a class="footer__lien footer__lien--gras" href="#vide"><i class="footer__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
-                <li><a class="footer__lien" href="#vide">Mentions légales</a></li>
-                <li><a class="footer__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a></li>
-            </ul>
+        <footer class="ftr">
+            <div class="ftrCont">
+                <div class="ftrCont__titre">ohmyfood</div>
+                <ul>  
+                    <li><a class="ftrCont__lien ftrCont__lien--gras" href="#vide"><i class="ftrCont__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
+                    <li><a class="ftrCont__lien ftrCont__lien--gras" href="#vide"><i class="ftrCont__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
+                    <li><a class="ftrCont__lien" href="#vide">Mentions légales</a></li>
+                    <li><a class="ftrCont__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a></li>
+                </ul>
+            </div>
         </footer>
+    
     </body>
 
 </html>

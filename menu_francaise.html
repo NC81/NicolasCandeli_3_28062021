@@ -20,103 +20,134 @@
     <body class="body">
         <!-- EN-TÊTE -->
         <header>
-            <div class="logo"> 
+            <div> 
                 <img src="./images/logo.svg" alt="Logo Ohmyfood!" class="header__logo" />
                 <a  href="index.html" class="btn-retour"><i class="fas fa-arrow-left"></i></a>   
             </div>
         </header>
         <!-- SECTION - MENU -->
-        <div class="bloc-menu"><section class="sMenu">
+        <div class="bloc-menu francaise"><section class="sMenu">
             <div class="menu-titre">
                 <div class="menu-titre__txt">À la française</div>
-                <i class="menu-titre__aime far fa-heart"></i>
+                <div class="btn-coeur btn-coeur-menu">
+                    <i class="btn-coeur__vi far fa-heart"></i>
+                    <i class="btn-coeur__pl fas fa-heart"></i>
+                </div>
             </div>
             <div class="menu-flex">
-              <ul class="menu-liste">
-                <div class="menu-liste__titre">ENTRÉES<div class="menu-liste__separ"></div></div>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Au piment d'Espelette et à la truffe noire</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-            </ul>
-            <ul class="menu-liste">
-                <div class="menu-liste__titre">PLATS<div class="menu-liste__separ"></div></div>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-            </ul>  
-            <ul class="menu-liste">
-                <div class="menu-liste__titre">DESSERTS<div class="menu-liste__separ"></div></div>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-                <li><a class="menu-lien" href="#vide">
-                    <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
-                    <p class="menu-lien__flex">
-                        <span class="menu-lien__compo">Aux zestes d'orange</span>
-                        <span class="menu-lien__prix">25€</span>
-                    </p>
-                </a></li>
-            </ul>
+                <ul class="menu-liste">
+                    <div class="menu-liste__titre">ENTRÉES<div class="menu-liste__separ"></div></div>
+                    <li class="menu-li menu-li--1">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Tartare de poulpe acidulé</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Aux zestes d'orange</span>
+                                <span class="menu-lien__prix">25€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                    <li class="menu-li menu-li--2">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Velouté de légumes d'antan</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Carotte, panais, topinambour</span>
+                                <span class="menu-lien__prix">35€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                    <li class="menu-li menu-li--3">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Soupe à l'oignon</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Revisitée</span>
+                                <span class="menu-lien__prix">20€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                </ul>
+                <ul class="menu-liste">
+                    <div class="menu-liste__titre">PLATS<div class="menu-liste__separ"></div></div>
+                    <li class="menu-li menu-li--1">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Coquilles Saint-Jacques</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Accompagnées d'une purée de panais</span>
+                                <span class="menu-lien__prix">40€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                    <li class="menu-li menu-li--2">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Magret de canard</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Et parmentier de pommes de terre</span>
+                                <span class="menu-lien__prix">35€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                    <li class="menu-li menu-li--3">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Pigeonneau d’Ille-et-Vilaine</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Sur son lit de gnocchis aux légumes</span>
+                                <span class="menu-lien__prix">44€</span>
+                            </p>
+                        </a><div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                </ul>  
+                <ul class="menu-liste">
+                    <div class="menu-liste__titre">DESSERTS<div class="menu-liste__separ"></div></div>
+                    <li class="menu-li menu-li--1">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Pétales de violettes glacés</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Et purée de noisettes</span>
+                                <span class="menu-lien__prix">18€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                    <li class="menu-li menu-li--2">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Fondant au chocolat</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Revisité</span>
+                                <span class="menu-lien__prix">22€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                    <li class="menu-li menu-li--3">
+                        <a class="menu-lien" href="#vide">
+                            <h2 class="menu-lien__titre">Millefeuille croustillant</h2>
+                            <p class="menu-lien__flex">
+                                <span class="menu-lien__compo">Myrtilles et pâte d’amande</span>
+                                <span class="menu-lien__prix">23€</span>
+                            </p>
+                        </a>
+                        <div class="reserv"><i class="fas fa-check-circle"></i></div>
+                    </li>
+                </ul>
             </div>  
             <button class="btn btn-menu">Commander</button>
         </section></div>
         <!-- PIED DE PAGE -->
-        <footer class="footer">
-            <div class="footer__logo">ohmyfood</div>
-            <ul>  
-                <li><a class="footer__lien footer__lien--gras" href="#vide"><i class="footer__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
-                <li><a class="footer__lien footer__lien--gras" href="#vide"><i class="footer__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
-                <li><a class="footer__lien" href="#vide">Mentions légales</a></li>
-                <li><a class="footer__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a></li>
-            </ul>
-        </footer>   
+        <footer class="ftr">
+            <div class="ftrCont">
+                <div class="ftrCont__titre">ohmyfood</div>
+                <ul>  
+                    <li><a class="ftrCont__lien ftrCont__lien--gras" href="#vide"><i class="ftrCont__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
+                    <li><a class="ftrCont__lien ftrCont__lien--gras" href="#vide"><i class="ftrCont__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
+                    <li><a class="ftrCont__lien" href="#vide">Mentions légales</a></li>
+                    <li><a class="ftrCont__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
     
     </body>
 
