@@ -17,60 +17,66 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     
-    <body class="body bAccueil">
+    <body class="bAccueil">
         <div class="loader">
             <div class="loader-ttr">
                 <div class="loader-1">oh</div><div class="loader-2">my</div>
                 <div class="loader-3"><div class="loader-3__f">f</div><div class="loader-3__o">o</div><div class="loader-3__o">o</div>d</div>
             </div> 
        </div>     
-            
+        <!-- BLOC-PAGE -->
         <div class="bloc-accueil">
             <!-- EN-TÊTE -->
-            <header>
+            <header class="header">
                 <div><img src="./images/logo.svg" alt="Logo Ohmyfood!" class="header__logo" /></div>
-                <div class="header-flex"> 
-                    <form method="post" action="traitement.php">
-                        <label for="ville" class="form__label"><i class="fas fa-map-marker-alt"></i></label>
-                        <input id="ville" name="ville" type="text" placeholder="Où mangez-vous ?"/>
-                        <h1 class="form__titre">Réservez le menu qui vous convient</h1>
+                <div class="header__flex"> 
+                    <form class="form" method="post" action="traitement.php">
+                        <label class="form__label" for="ville"><i class="fas fa-map-marker-alt"></i></label>
+                        <input class="form__input" id="ville" name="ville" type="text" placeholder="Où mangez-vous ?"/>
+                        <h2 class="form__titre">Réservez le menu qui vous convient</h2>
                         <p class="form__texte">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-                        <button class="btn btn-form">Explorer nos restaurants</button>
+                        <button class="btn-envoi btn-envoi--form">Explorer nos restaurants</button>
                    </form>
                 <!-- SECTION - FONCTIONNEMENT -->
                     <section class="sFonct">
-                        <h1 class="fonct-liste__titre">Fonctionnement</h1>
-                        <ul class="fonct-liste">
-                            <li class="fonct-liste__li"><a class="fonct-lien" href="#vide">
-                                <div class="fonct-lien__cercle">1</div>
-                                <i id="fi-1" class="fonct-lien__icone fas fa-fw fa-mobile-alt"></i>Choisissez un restaurant
-                            </a></li>
-                            <li class="fonct-liste__li"><a class="fonct-lien" href="#vide">
-                                <div class="fonct-lien__cercle">2</div>
-                                <i id="fi-2" class="fonct-lien__icone fas fa-fw fa-list-ul"></i>Composez votre menu
-                            </a></li>
-                            <li class="fonct-liste__li"><a class="fonct-lien" href="#vide">
-                                <div class="fonct-lien__cercle">3</div>
-                                <i id="fi-3" class="fonct-lien__icone fas fa-fw fa-store"></i>Dégustez au restaurant
-                            </a></li>
+                        <h2 class="sFonct__titre">Fonctionnement</h2>
+                        <ul class="sFonct__ul">
+                            <li class="sFonct__li">
+                                <a class="fonct-lien" href="#vide">
+                                    <div class="fonct-lien__cercle">1</div>
+                                    <i class="fonct-lien__icone fas fa-fw fa-mobile-alt"></i>Choisissez un restaurant
+                                </a>
+                            </li>
+                            <li class="sFonct__li">
+                                <a class="fonct-lien" href="#vide">
+                                    <div class="fonct-lien__cercle">2</div>
+                                    <i class="fonct-lien__icone fas fa-fw fa-list-ul"></i>Composez votre menu
+                                </a>
+                            </li>
+                            <li class="sFonct__li">
+                                <a class="fonct-lien" href="#vide">
+                                    <div class="fonct-lien__cercle">3</div>
+                                    <i class="fonct-lien__icone fas fa-fw fa-store"></i>Dégustez au restaurant
+                                </a>
+                            </li>
                         </ul>
                     </section>    
                 </div>
             </header>
             <!-- SECTION - RESTAURANTS -->
             <section class="sRest">
-                <h1>Restaurants</h1>
-                <div class="rest-flex">
+                <h2 class="sRest__titre">Restaurants</h2>
+                <div class="sRest__flex">
                     <a class="rest-lien" href="menu_francaise.html">
                         <figure class="rest-lien__fig">
                             <img src="./images/restaurants/200_palette-du-gout.jpg" alt="La palette du goût" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
-                                <h2>La palette du goût</h2>
+                                <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </figcaption>
                         </figure>
                         <div class="rest-lien__info">Nouveau</div>
-                        <div class="btn-coeur btn-coeur-rest">
+                        <div class="btn-coeur btn-coeur--rest">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
@@ -79,12 +85,12 @@
                         <figure class="rest-lien__fig">
                             <img src="./images/restaurants/200_note-enchantee.jpg" alt="La note enchantée" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
-                                <h2>La note enchantée</h2>
+                                <h3>La note enchantée</h3>
                                 <p>Charonne</p>
                             </figcaption>
                         </figure>
                         <div class="rest-lien__info">Nouveau</div>
-                        <div class="btn-coeur btn-coeur-rest">
+                        <div class="btn-coeur btn-coeur--rest">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
@@ -93,11 +99,11 @@
                         <figure class="rest-lien__fig">
                             <img src="./images/restaurants/200_la-francaise.jpg" alt="À la française" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
-                                <h2>À la française</h2>
+                                <h3>À la française</h3>
                                 <p>Cité Rouge</p>
                             </figcaption>
                         </figure>
-                        <div class="btn-coeur btn-coeur-rest">
+                        <div class="btn-coeur btn-coeur--rest">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
@@ -106,11 +112,11 @@
                         <figure class="rest-lien__fig">
                             <img src="./images/restaurants/200_delice-des-sens.jpg" alt="Le délice des sens" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
-                                <h2>Le délice des sens</h2>
+                                <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </figcaption>
                         </figure>
-                        <div class="btn-coeur btn-coeur-rest">
+                        <div class="btn-coeur btn-coeur--rest">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
@@ -119,14 +125,22 @@
             </section>
         </div>
         <!-- PIED DE PAGE -->
-        <footer class="ftr">
-            <div class="ftrCont">
-                <div class="ftrCont__titre">ohmyfood</div>
-                <ul>  
-                    <li><a class="ftrCont__lien ftrCont__lien--gras" href="#vide"><i class="ftrCont__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a></li>
-                    <li><a class="ftrCont__lien ftrCont__lien--gras" href="#vide"><i class="ftrCont__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a></li>
-                    <li><a class="ftrCont__lien" href="#vide">Mentions légales</a></li>
-                    <li><a class="ftrCont__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a></li>
+        <footer>
+            <div class="ftr-cont">
+                <div class="ftr-cont__titre">ohmyfood</div>
+                <ul class="ftr-cont__ul">  
+                    <li class="ftr-cont__li">
+                        <a class="ftr-cont__lien ftr-cont__lien--gras" href="#vide"><i class="ftr-cont__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a>
+                    </li>
+                    <li class="ftr-cont__li">
+                        <a class="ftr-cont__lien ftr-cont__lien--gras" href="#vide"><i class="ftr-cont__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a>
+                    </li>
+                    <li class="ftr-cont__li">
+                        <a class="ftr-cont__lien" href="#vide">Mentions légales</a>
+                    </li>
+                    <li class="ftr-cont__li">
+                        <a class="ftr-cont__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a>
+                    </li>
                 </ul>
             </div>
         </footer>

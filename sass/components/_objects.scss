@@ -1,13 +1,3 @@
-.header__logo {
-  display: block;
-  width: 165px; /* Pour correspondre à la maquette */
-  margin: 23px auto 11px auto;
-  @include desk-min {
-    width: initial;
-    margin: 50px auto 50px auto;
-  }
-} 
-  
 .rest-lien__info {
   position: absolute;
   top: 10px;

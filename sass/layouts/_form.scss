@@ -1,4 +1,4 @@
-form {
+.form {
   position: relative;
   text-align: center; /* Centre le titre, le paragraphe (et l'input en responsive) */
   background: $clr-qua;
@@ -10,22 +10,23 @@ form {
   @include desk-min {
     width: 60%;
   }
-  label {
+  &__label {
     position: absolute;
     line-height: 50px; /* La hauteur étant identique à celle de l'input, "top: 0" centre l'élément */
     top: 0;
-    left: 27%; 
+    left: 28%; 
     color: darken($clr-inp, 65);
     @include tabl-min {
-      left: 23%;
+      left: 30%;
     }
     @include desk-min {
       left: 36%;
     }
   }
-  input {
-    padding: 0 0 0 35%; /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
-    width: 65%;
+  &__input {
+    box-sizing: border-box;
+    padding-left: 35%; /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
+    width: 100%;
     line-height: 50px;
     background: $clr-inp;  
     border: none;
@@ -36,22 +37,20 @@ form {
     color: darken($clr-inp, 65);
     @include tabl-min {
       border-radius: 30px 30px 0 0;
-      padding: 0 25% 0 30%;
-      width: 45%;
+      padding: 0 25% 0 35%;
     }
     @include desk-min {
       padding: 0 30% 0 40%;
-      width: 30%;
     }
   }
-  h1 {
+  &__titre {
     font-size: 1.5em;
     margin: 40px 15% 0 15%;
     @include desk-min {
       margin-top: 50px
     }
   } 
-  p {
+  &__texte {
     font-size: 1.1em;
     margin: 15px 10% 0 10%;
     font-weight: 300;

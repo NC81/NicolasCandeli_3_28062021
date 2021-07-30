@@ -1,63 +1,111 @@
 .sMenu {
   background: $clr-qua;
-  padding: 30px 5% 82px 5%;
+  padding: 30px map-get($larg, padding) 82px map-get($larg, padding);
   border-radius: 40px 40px 0 0;
   height: 100%;
   width: 100%;
   box-sizing: border-box; /* Pour que max-width contienne le padding */
   max-width: 1400px; 
   @include desk-min {
-    width: 90%;
+    width: map-get($larg, bloc);
     border-radius: 40px;
   }
-  .menu-titre {
+  &__titre {
     display: flex;
     justify-content: space-between;
-    padding: 0 7% 0 0;
+    padding: 0 7% 0 5px;
     background: $clr-qua;
     border-radius: 30px 30px 0 0;
-    &__txt {
+    >h1 {
       font-family: 'Shrikhand';
       font-size: 1.8em;
+      font-weight: 400;
     }
-  } 
-}
-
-.menu-flex {
-  @include tabl-min {
+  }
+  &__flex {
+    @include tabl-min {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2%;
-  }
-  .menu-liste {
-    list-style-type: none;
-    font-weight: 300;
-    margin: 42px 0 0 0; 
-    padding: 0; 
-    @include tabl-min {
-      flex: 1 1 338px;
-      max-width: 49%; /* "gap: 2%" diminue la taille des flex-items de 1%, une valeur de 49% permet d'obtenir la même largeur maximum */
     }
-    @include desk-min {
-      width: 31%;
-    }
-    &__titre {
-      margin-left: 5px;
-    }  
-    &__separ {
-      border-bottom: 3px solid $clr-ter;
-      margin: 5px 0 0 0;
-      width: 40px;
-    }
-  }
-}    
+  }   
+} 
 
+.menu-type {
+  margin-top: 35px;
+  @include tabl-min {
+    flex: 1 1 338px;
+    max-width: 49%; /* "gap: 2%" diminue la taille des flex-items de 1%, une valeur de 49% permet d'obtenir la même largeur maximum */
+  }
+  @include desk-min {
+    width: 31%;
+  }
+  &__titre {
+    position: relative;
+    margin: 0 0 23px 5px;
+    font-size: 1em;
+    font-weight: 300;
+    &::after {
+      @include after;
+      bottom: -8px;
+      border-bottom: 3px solid $clr-ter;
+      width: 40px;      
+    }
+  }
+  &__ul {
+    list-style-type: none;
+    font-weight: 300;   
+  }  
+  &__li {  
+    display: flex;
+    box-shadow: $obr-lien;
+    position: relative;
+    border-radius: 16px;
+    background: white;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 70px;
+    margin-top: 16px;
+    padding: 14px 22px 11px 11px;
+    animation: delai 1s;
+    animation-fill-mode: backwards;
+      @for $n from 1 through 5 {
+        &--#{$n} {
+          animation-delay: .15s * $n;
+      }
+    }
+  }
+}
+
+@keyframes delai {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+ 
 .menu-lien {
+  width: 100%;
+  &:hover {
+    .menu-lien__titre {
+      width: calc(100% - 70px);
+    }
+    .compo {
+      width: calc(100% - 100px);
+    }
+    .prix {
+      transform: translateX(-70px)
+    }
+    .menu-lien__anim {
+      transform: translateX(-70px);
+    }
+    .verif {
+      animation: valid .5s;
+      animation-fill-mode: none;
+    }
+  }  
   &__titre {
     font-size: 1.1em;
     font-weight: 500;
-    margin: 0;
     transition: width .6s;
     width: 100%;
     text-overflow: ellipsis;
@@ -67,63 +115,24 @@
   &__flex {
     display: flex;
     justify-content: space-between;
-    margin: 6px 0 0 0;
+    margin-right: 6px;
     font-size: .95em;
-  } 
-  &__compo {
-    font-weight: 300;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    transition: width .6s;
-    width: 100%;
-  }
-  &__prix {
-    font-weight: 500;  
-    transition: transform .5s .05s;
-    transform: translateX(0);
-  }
-} 
-
-.menu-li{
-  display: flex;
-  box-shadow: $obr-lien;
-  position: relative;
-  border-radius: 16px;
-  background: white;
-  overflow: hidden;
-  height: 45px;
-  margin-top: 16px;
-  padding: 15px 22px 10px 10px;
-  animation: delai 1s;
-  animation-fill-mode: backwards;
-  @for $n from 1 through 5 {
-    &--#{$n} {
-      animation-delay: .15s * $n;
+    >.compo {
+      font-weight: 300;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      transition: width .6s;
+      width: 100%;
+      margin-top: 5px;
     }
-  }
-  &:hover {
-    .menu-lien__titre {
-      width: calc(100% - 70px);
+    >.prix {
+      font-weight: 500;  
+      transition: transform .5s .05s;
+      transform: translateX(0);
     }
-    .menu-lien__compo {
-      width: calc(100% - 100px);
-    }
-    .menu-lien__prix {
-      transform: translateX(-70px)
-    }
-    .reserv {
-      transform: translateX(-70px);
-    }
-    .reserv .fas {
-      animation: valid .5s;
-      animation-fill-mode: none;
-    }
-  }
-  .menu-lien {
-    width: 100%;
-  }
-  .reserv {
+  }  
+  &__anim {
     position: absolute;
     background: $clr-ter;
     right: -70px; 
@@ -133,21 +142,16 @@
     transition: transform .5s;
     transform: translateX(0);
     text-align: center;
-    .fas {
+    >.verif {
       color: white;
       font-size: 1.7em;
       line-height: 70px;
       transform: rotate(-360deg);
     }
   }
-}
+} 
 
 @keyframes valid {
   from {transform: rotate(-360deg);}
   to {transform: rotate(0);}
-}
-
-@keyframes delai {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }

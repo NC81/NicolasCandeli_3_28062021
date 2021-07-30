@@ -1,11 +1,22 @@
-.header-flex {
-  @include tabl-min {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    padding: 50px 5% 50px 5%;
-  }
-  @include desk-min {
-    padding: 30px 0 50px 5%;
+.header {
+  &__logo {
+    display: block;
+    width: 165px; /* Pour correspondre à la maquette */
+    margin: 0 auto 11px auto;
+    @include desk-min {
+      width: initial;
+      margin: 0 auto 50px auto;
+    }
+  } 
+  &__flex {
+    @include tabl-min {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: 50px map-get($larg, padding) 70px map-get($larg, padding);
+    }
+    @include desk-min {
+      padding: 30px 0 70px map-get($larg, padding);
+    }
   }
 }

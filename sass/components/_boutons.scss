@@ -1,4 +1,4 @@
-.btn {
+.btn-envoi {
   display: block;
   position: relative;
   line-height: 50px;
@@ -27,55 +27,25 @@
     box-shadow: $obr-btn-survol; /* Mêmes valeurs que sur .btn avec une opacité plus faible */
     transition: opacity .5s;
   }  
-}
-
-.btn-form {
-  width: 220px;
-  margin-top: 30px;
-  @include tabl-min {
-    min-width: 219px;
-    width: 45%;
-    margin-top: 35px;
-  }
-} 
-
-.btn-menu {
-  width: 165px;
-  margin: 50px auto 0 auto;
-  @include desk-min {
-    width: 31%;
-  }
-}    
-
-.btn-retour {
-  position: absolute;
-  left: 0;
-  top: 0;  
-  font-size: 1.1em;
-  line-height: 63px; /* Correspond à la hauteur du logo avec marges */
-  padding: 0 2% 0 5%; 
-  @include desk-min {
-    line-height: 134px;
-  }
-}
+  &--form {
+    width: 220px;
+    margin-top: 30px;
+    @include tabl-min {
+      min-width: 219px;
+      width: 45%;
+      margin-top: 35px;
+    }
+  } 
+  &--menu {
+    width: 165px;
+    margin: 50px auto 0 auto;
+    @include tabl-min {
+      width: 31%;
+    }
+  }  
+}  
 
 .btn-coeur {
-  &__vi {
-    font-size: 1.5em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-weight: 100;
-    z-index: 2;
-  }
-  &__pl {
-    font-size: 1.5em;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    color: $clr-sec;
-  }
   &:hover {
     &::after {
     transform: scaleY(0);
@@ -92,22 +62,48 @@
     transform: scaleY(1);
     transform-origin: top;
   }
-}
-
-.btn-coeur-rest {
-  position: absolute;
-  bottom: 50px;
-  right: 50px;  
-  &::after {
-    background: white;
+  &--rest {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;  
+    &::after {
+      background: white;
+    }
+  }
+  &--menu {
+    position: relative;
+    padding-right: 20px;
+    line-height: 42px;
+    &::after {
+      background: $clr-qua;
+    }
+  }
+  &__vi {
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 100;
+    z-index: 2;
+  }
+  &__pl {
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    color: $clr-sec;
   }
 }
 
-.btn-coeur-menu {
-  position: relative;
-  padding-right: 20px;
-  line-height: 42px;
-  &::after {
-    background: $clr-qua;
+.btn-retour {
+  position: absolute;
+  left: 0;
+  top: 0;  
+  font-size: 1.1em;
+  line-height: 63px; /* Correspond à la hauteur du logo avec marges */
+  padding: 0 2% 0 5%; 
+  @include desk-min {
+    line-height: 134px;
   }
 }

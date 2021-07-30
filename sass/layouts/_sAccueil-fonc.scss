@@ -1,67 +1,70 @@
 .sFonct {
-  padding: 50px 5% 70px 5%;
+  padding: 50px map-get($larg, padding) 70px map-get($larg, padding);
   @include tabl-min {
     width: 43%;
     padding: 0;
     max-width: 415px;
   }
   @include desk-min {
-    width: 32%
+    width: 32%;
   }
-  .fonct-liste {
+  &__titre {
+    margin-bottom: 5px;
+  }
+  &__ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    &__titre {
-      margin: 0 0 5px 0;
-    }
-    &__li {
-      margin: 24px 0 0 12px;
-    }
   }  
-  .fonct-lien {
-    position: relative;
-    box-shadow: $obr-lien;
+  &__li {
+      margin: 24px 0 0 12px;
+  }  
+}
+
+.fonct-lien {
+  position: relative;
+  box-shadow: $obr-lien;
+  display: inline-block;
+  line-height: 74px; 
+  font-weight: 500;
+  width: 100%;
+  border-radius: 20px;
+  background: $clr-qua;
+  z-index: 1;
+  &__cercle {
     display: inline-block;
-    line-height: 74px; 
-    font-weight: 500;
-    width: 100%;
-    border-radius: 20px;
-    background: $clr-qua;
-    z-index: 1;
-    &__cercle {
-      display: inline-block;
-      position: relative;
-      left: -12px;
-      text-align: center;
-      line-height: 25px;
-      width: 25px;
-      background: $clr-pri;
-      color: white;
-      border-radius: 50%;
-      font-size: .8em;
-    }
-    &__icone {
-      margin-left: 12px;
-      margin-right: 27px;
-      color: darken($clr-qua, 50);
-    }
-    &:hover {
-      &::after {
-        opacity: 1;
-      }
-      #fi-1, #fi-2, #fi-3 {
-        color: $clr-pri;
-      }
-    }
+    position: relative;
+    left: -12px;
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    background: $clr-pri;
+    color: white;
+    border-radius: 50%;
+    font-size: .8em;
+  }
+  &__icone {
+    margin: 0 6% 0 2%;
+    color: darken($clr-qua, 50);
+  }
+  &:hover {
     &::after {
-      @include after;
-      z-index: -1;
-      transition: opacity .5s;
-      border-radius: 20px;
-      background: $clr-pri-cr; 
+      opacity: 1;
     }
+    .fonct-lien__icone {
+      color: $clr-pri;
+    }
+
+    // #fi-1, #fi-2, #fi-3 {
+    //   color: $clr-pri;
+    // }
+  }
+  &::after {
+    @include after;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity .5s;
+    border-radius: 20px;
+    background: $clr-pri-cr; 
   }
 }

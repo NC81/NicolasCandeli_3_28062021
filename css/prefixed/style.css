@@ -219,7 +219,7 @@
   padding: 10px 0 14px 13px;
   background: white;
 }
-.rest-lien__descr h2 {
+.rest-lien__descr h3 {
   margin: 0 0 5px 0;
   font-size: 1.06em;
 }
@@ -245,7 +245,7 @@
     border-radius: 40px;
   }
 }
-.sMenu .menu-titre {
+.sMenu .sMenu__titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,13 +256,13 @@
   background: #f6f6f6;
   border-radius: 30px 30px 0 0;
 }
-.sMenu .menu-titre__txt {
+.sMenu .sMenu__titre__txt {
   font-family: "Shrikhand";
   font-size: 1.8em;
 }
 
 @media all and (min-width: 768px) {
-  .menu-flex {
+  .sMenu__flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -274,14 +274,14 @@
     gap: 2%;
   }
 }
-.menu-flex .menu-liste {
+.sMenu__flex .menu-liste {
   list-style-type: none;
   font-weight: 300;
   margin: 42px 0 0 0;
   padding: 0;
 }
 @media all and (min-width: 768px) {
-  .menu-flex .menu-liste {
+  .sMenu__flex .menu-liste {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 338px;
             flex: 1 1 338px;
@@ -290,19 +290,19 @@
   }
 }
 @media all and (min-width: 1366px) {
-  .menu-flex .menu-liste {
+  .sMenu__flex .menu-liste {
     width: 31%;
   }
 }
-.menu-flex .menu-liste__titre {
+.sMenu__flex .menu-liste__titre {
   margin-left: 5px;
 }
-.menu-flex .menu-liste__separ {
+.sMenu__flex .menu-liste__separ {
   border-bottom: 3px solid #99E2D0;
   margin: 5px 0 0 0;
   width: 40px;
 }
-.menu-flex .menu-liste li {
+.sMenu__flex .menu-liste li {
   margin-top: 16px;
 }
 
@@ -587,12 +587,12 @@ a {
   }
 }
 
-.btn-menu {
+.btn--menu {
   width: 165px;
   margin: 50px auto 0 auto;
 }
 @media all and (min-width: 1366px) {
-  .btn-menu {
+  .btn--menu {
     width: 31%;
   }
 }
@@ -674,7 +674,7 @@ a {
   }
 }
 
-.menu-titre__aime {
+.sMenu__titre__aime {
   font-size: 1.5em;
   font-weight: 100;
   line-height: 42px;

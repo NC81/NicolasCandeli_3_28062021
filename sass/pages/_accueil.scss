@@ -1,0 +1,7 @@
+.bAccueil {
+  @include desk-min {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

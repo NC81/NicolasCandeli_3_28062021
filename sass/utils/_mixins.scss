@@ -1,24 +1,20 @@
 @mixin after {
   content: "";
   position: absolute;
-  opacity: 0;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1;
 }
 
-$ombre-lien: 2px 5px 13px -1px rgba(35, 35, 35, 0.13);
-
 @mixin tabl-min {
-  @media all and (min-width: map-get($breakpoints, tablette)){
+  @media all and (min-width: map-get($bkpt, tablette)){
     @content;
   }
 }
 
 @mixin desk-min {
-  @media all and (min-width: map-get($breakpoints, desktop)){
+  @media all and (min-width: map-get($bkpt, desktop)){
     @content;
   }
 }
