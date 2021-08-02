@@ -54,10 +54,6 @@
     .fonct-lien__icone {
       color: $clr-pri;
     }
-
-    // #fi-1, #fi-2, #fi-3 {
-    //   color: $clr-pri;
-    // }
   }
   &::after {
     @include after;
