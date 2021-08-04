@@ -1,38 +1,43 @@
 .bloc-accueil {
   @include desk-min {
     width: 90%;
-    max-width: 1400px;
+    max-width: map-get($larg, max);
     min-height: 93vh;
+  }
+  .accu {
+    animation: appar 1s backwards;
+      @for $n from 1 through 2 {
+        &--#{$n} {
+          animation-delay: .15s * $n;
+      }
+    }
   }
 }
 
 .bloc-menu {
-  background-size: 100%;
+  background-size: 121%;
   background-repeat: no-repeat;
-  padding-top: 200px;
+  padding-top: 220px;
   @include tabl-min {
-    display: flex;
-    justify-content: center;
+    background-size: 100%;
   }
   @include desk-min {
+    display: flex;
+    justify-content: center;
     background-size: cover;
     padding: 12% 0 5% 0;
     min-height: 62vh;
   }
-}  
-  
-.francaise {
-  background-image: url("http://127.0.0.1:5500/images/restaurants/200_la-francaise.jpg");
-}
-
-.note {
-  background-image: url("http://127.0.0.1:5500/images/restaurants/200_note-enchantee.jpg");
-}
-
-.palette {
-  background-image: url("http://127.0.0.1:5500/images/restaurants/200_palette-du-gout.jpg");
-}
-
-.delice {
-  background-image: url("http://127.0.0.1:5500/images/restaurants/200_delice-des-sens.jpg");
+  &--francaise {
+    background-image: url("../images/restaurants/menu/200_la-francaise.jpg");
+  }
+  &--note-enchantee {
+    background-image: url("../images/restaurants/menu/200_note-enchantee.jpg");
+  }
+  &--palette-du-gout {
+    background-image: url("../images/restaurants/menu/200_palette-du-gout.jpg");
+  }
+  &--delice-des-sens {
+    background-image: url("../images/restaurants/menu/200_delice-des-sens.jpg");
+  }
 }

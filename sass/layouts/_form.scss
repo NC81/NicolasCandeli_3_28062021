@@ -4,7 +4,7 @@
   background: $clr-qua;
   padding-bottom: 55px;
   @include tabl-min {
-    border-radius: 30px;
+    border-radius: $br-bloc;
     width: 53%;
   }
   @include desk-min {
@@ -14,7 +14,7 @@
     position: absolute;
     line-height: 50px; /* La hauteur étant identique à celle de l'input, "top: 0" centre l'élément */
     top: 0;
-    left: 28%; 
+    left: 28%;
     color: darken($clr-inp, 65);
     @include tabl-min {
       left: 30%;
@@ -25,10 +25,10 @@
   }
   &__input {
     box-sizing: border-box;
-    padding-left: 35%; /* Il faut supprimer le padding par défaut pour que %width + %padding-left = 100% */
+    padding-left: 35%;
     width: 100%;
     line-height: 50px;
-    background: $clr-inp;  
+    background: $clr-inp;
     border: none;
     box-shadow: inset 0px 6px 8px -9px rgba(0,0,0,0.63);
     font-family: $ft-roboto;
@@ -36,7 +36,7 @@
     font-weight: 500;
     color: darken($clr-inp, 65);
     @include tabl-min {
-      border-radius: 30px 30px 0 0;
+      border-radius: $br-bloc $br-bloc 0 0;
       padding: 0 25% 0 35%;
     }
     @include desk-min {

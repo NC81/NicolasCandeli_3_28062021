@@ -3,7 +3,7 @@
     
     <head>
         <meta charset="utf-8" />
-        <title>Oh my food! - Réservez vos menus</title>
+        <title>Oh my food! - Réservez aussi vos repas !</title>
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,19 +15,26 @@
         <link rel="stylesheet" href="./css/style.css" />
         <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Metatags -->
+        <meta name="description" content="Composez vos menus dès à présent pour que tout soit prêt à votre arrivée." />
+        <meta name="twitter:card" content="summary" />
+        <meta property="og:title" content="Oh my food! - Réservez aussi vos repas !" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nc81.github.io/NicolasCandeli_3_28062021/" />
+        <meta property="og:image" content="https://nc81.github.io/NicolasCandeli_3_28062021/images/ohmyfood.svg" />
+        <meta property="og:description" content="Composez vos menus dès à présent pour que tout soit prêt à votre arrivée." />
     </head>
     
     <body class="bAccueil">
         <!-- LOADER -->
-        <div class="ldr">
-            <div class="ldr__rel">
-                <div class="ldr-lumi ldr-lumi--1"></div><div class="ldr--lumi ldr__lumi--2"></div><div class="ldr-lumi ldr-lumi--3"></div> <div class="ldr-lumi ldr-lumi--4"></div>
-                <div class="ldr-bord"></div>
+        <div class="loader">
+            <div class="loader__rel">
+                <div class="ldr-lumi ldr-lumi--1"></div><div class="ldr-lumi ldr-lumi--2"></div><div class="ldr-lumi ldr-lumi--3"></div> <div class="ldr-lumi ldr-lumi--4"></div>
                 <div class="ldr-plat">
-                    <div class="feuille feuille--1"><i class="fas fa-leaf"></i></div> <div class="feuille feuille--2"><i class="fas fa-leaf"></i></div><div class="feuille feuille--3"><i class="fab fa-envira"></i></div>
-                    <div class="raisin raisin--1"></div><div class="raisin raisin--2"></div><div class="raisin raisin--3"></div><div class="raisin raisin--4"></div><div class="raisin raisin--5"></div>
-                    <div class="gateau"><i class="fas fa-pizza-slice"></i></div>
-                    <div class="cerise cerise--1"></div><div class="cerise cerise--2"></div><div class="cerise cerise--3"></div>
+                    <div class="ldr-plat__feui ldr-plat__feui--1"><i class="fas fa-leaf"></i></div> <div class="ldr-plat__feui ldr-plat__feui--2"><i class="fas fa-leaf"></i></div><div class="ldr-plat__feui ldr-plat__feui--3"><i class="fab fa-envira"></i></div>
+                    <div class="ldr-plat__rais ldr-plat__rais--1"></div><div class="ldr-plat__rais ldr-plat__rais--2"></div><div class="ldr-plat__rais ldr-plat__rais--3"></div><div class="ldr-plat__rais ldr-plat__rais--4"></div><div class="ldr-plat__rais ldr-plat__rais--5"></div>
+                    <div class="ldr-plat__tart"><i class="fas fa-pizza-slice"></i></div>
+                    <div class="ldr-plat__ceri ldr-plat__ceri--1"></div><div class="ldr-plat__ceri ldr-plat__ceri--2"></div><div class="ldr-plat__ceri ldr-plat__ceri--3"></div>
                 </div>
                 <div class="ldr-logo">
                     <div class="ldr-logo__o1">o</div> <div class="ldr-logo__h">h</div><div class="ldr-logo__m">m</div><div class="ldr-logo__y">y</div><div class="ldr-logo__f">f</div><div class="ldr-logo__o2">o</div><div class="ldr-logo__o3">o</div><div class="ldr-logo__d">d</div>
@@ -38,95 +45,95 @@
         <div class="bloc-accueil">
             <!-- EN-TÊTE -->
             <header class="header">
-                <div><img src="./images/logo.svg" alt="Logo Ohmyfood!" class="header__logo" /></div>
-                <div class="header__flex"> 
+                <div><img src="./images/ohmyfood.svg" alt="Logo Ohmyfood!" class="header__logo" /></div>
+                <div class="header__flex accu accu--1"> 
                     <form class="form" method="post" action="traitement.php">
                         <label class="form__label" for="ville"><i class="fas fa-map-marker-alt"></i></label>
                         <input class="form__input" id="ville" name="ville" type="text" placeholder="Où mangez-vous ?"/>
                         <h2 class="form__titre">Réservez le menu qui vous convient</h2>
                         <p class="form__texte">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
                         <button class="btn-envoi btn-envoi--form">Explorer nos restaurants</button>
-                   </form>
-                <!-- SECTION - FONCTIONNEMENT -->
+                    </form>
+                    <!-- SECTION - FONCTIONNEMENT -->
                     <section class="sFonct">
                         <h2 class="sFonct__titre">Fonctionnement</h2>
-                        <ul class="sFonct__ul">
-                            <li class="sFonct__li">
+                        <ol class="sFonct__liste">
+                            <li class="sFonct__etape">
                                 <a class="fonct-lien" href="#vide">
                                     <div class="fonct-lien__cercle">1</div>
                                     <i class="fonct-lien__icone fas fa-fw fa-mobile-alt"></i>Choisissez un restaurant
                                 </a>
                             </li>
-                            <li class="sFonct__li">
+                            <li class="sFonct__etape">
                                 <a class="fonct-lien" href="#vide">
                                     <div class="fonct-lien__cercle">2</div>
                                     <i class="fonct-lien__icone fas fa-fw fa-list-ul"></i>Composez votre menu
                                 </a>
                             </li>
-                            <li class="sFonct__li">
+                            <li class="sFonct__etape">
                                 <a class="fonct-lien" href="#vide">
                                     <div class="fonct-lien__cercle">3</div>
                                     <i class="fonct-lien__icone fas fa-fw fa-store"></i>Dégustez au restaurant
                                 </a>
                             </li>
-                        </ul>
+                        </ol>
                     </section>    
                 </div>
             </header>
             <!-- SECTION - RESTAURANTS -->
-            <section class="sRest">
+            <section class="sRest accu accu--2">
                 <h2 class="sRest__titre">Restaurants</h2>
                 <div class="sRest__flex">
-                    <a class="rest-lien" href="menu_francaise.html">
+                    <a class="rest-lien" href="menu_palette-du-gout.html">
                         <figure class="rest-lien__fig">
-                            <img src="./images/restaurants/200_palette-du-gout.jpg" alt="La palette du goût" class="rest-lien__img" />
+                            <img src="./images/restaurants/accueil/40_palette-du-gout.jpg" alt="La palette du goût" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
                                 <h3>La palette du goût</h3>
                                 <p>Ménilmontant</p>
                             </figcaption>
                         </figure>
                         <div class="rest-lien__info">Nouveau</div>
-                        <div class="btn-coeur btn-coeur--rest">
+                        <div class="btn-coeur btn-coeur--accu">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
                     </a>
-                    <a class="rest-lien" href="menu_francaise.html">
+                    <a class="rest-lien" href="menu_note-enchantee.html">
                         <figure class="rest-lien__fig">
-                            <img src="./images/restaurants/200_note-enchantee.jpg" alt="La note enchantée" class="rest-lien__img" />
+                            <img src="./images/restaurants/accueil/40_note-enchantee.jpg" alt="La note enchantée" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
                                 <h3>La note enchantée</h3>
                                 <p>Charonne</p>
                             </figcaption>
                         </figure>
                         <div class="rest-lien__info">Nouveau</div>
-                        <div class="btn-coeur btn-coeur--rest">
+                        <div class="btn-coeur btn-coeur--accu">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
                     </a>
                     <a class="rest-lien" href="menu_francaise.html">
                         <figure class="rest-lien__fig">
-                            <img src="./images/restaurants/200_la-francaise.jpg" alt="À la française" class="rest-lien__img" />
+                            <img src="./images/restaurants/accueil/40_la-francaise.jpg" alt="À la française" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
                                 <h3>À la française</h3>
                                 <p>Cité Rouge</p>
                             </figcaption>
                         </figure>
-                        <div class="btn-coeur btn-coeur--rest">
+                        <div class="btn-coeur btn-coeur--accu">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
                     </a>
-                    <a class="rest-lien" href="menu_francaise.html">
+                    <a class="rest-lien" href="menu_delice-des-sens.html">
                         <figure class="rest-lien__fig">
-                            <img src="./images/restaurants/200_delice-des-sens.jpg" alt="Le délice des sens" class="rest-lien__img" />
+                            <img src="./images/restaurants/accueil/40_delice-des-sens.jpg" alt="Le délice des sens" class="rest-lien__img" />
                             <figcaption class="rest-lien__descr">
                                 <h3>Le délice des sens</h3>
                                 <p>Folie-Méricourt</p>
                             </figcaption>
                         </figure>
-                        <div class="btn-coeur btn-coeur--rest">
+                        <div class="btn-coeur btn-coeur--accu">
                             <i class="btn-coeur__vi far fa-heart"></i>
                             <i class="btn-coeur__pl fas fa-heart"></i>
                         </div>
@@ -137,18 +144,18 @@
         <!-- PIED DE PAGE -->
         <footer>
             <div class="ftr-cont">
-                <div class="ftr-cont__titre">ohmyfood</div>
-                <ul class="ftr-cont__ul">  
-                    <li class="ftr-cont__li">
-                        <a class="ftr-cont__lien ftr-cont__lien--500" href="#vide"><i class="ftr-cont__icone fas fa-utensils fa-fw"></i><strong>Proposer un restaurant</strong></a>
+                <h4 class="ftr-cont__titre">ohmyfood</h4>
+                <ul class="ftr-cont__liste">  
+                    <li class="ftr-cont__elem">
+                        <a class="ftr-cont__lien ftr-cont__lien--fw500" href="#vide"><i class="ftr-cont__icone fas fa-utensils fa-fw"></i>Proposer un restaurant</a>
                     </li>
-                    <li class="ftr-cont__li">
-                        <a class="ftr-cont__lien ftr-cont__lien--500" href="#vide"><i class="ftr-cont__icone fas fa-hands-helping fa-fw"></i><strong>Devenir partenaire</strong></a>
+                    <li class="ftr-cont__elem">
+                        <a class="ftr-cont__lien ftr-cont__lien--fw500" href="#vide"><i class="ftr-cont__icone fas fa-hands-helping fa-fw"></i>Devenir partenaire</a>
                     </li>
-                    <li class="ftr-cont__li">
+                    <li class="ftr-cont__elem">
                         <a class="ftr-cont__lien" href="#vide">Mentions légales</a>
                     </li>
-                    <li class="ftr-cont__li">
+                    <li class="ftr-cont__elem">
                         <a class="ftr-cont__lien" href="mailto:nicolas.candeli@cegetel.net">Contact</a>
                     </li>
                 </ul>

@@ -1,16 +1,15 @@
 .btn-envoi {
   display: block;
-  position: relative;
+  position: relative; /* Permet de positionner le pseudo-élément */
   line-height: 50px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0; /* Par défaut les boutons ont un padding */
   background: $clr-btn;
   border: none;
   border-radius: 25px;
   box-shadow: $obr-btn;
   color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: $ft-roboto;
   font-size: 1em;   
   z-index: 1;
   &:hover {
@@ -24,14 +23,14 @@
     z-index: -1;
     border-radius: 25px;
     background: $clr-btn-survol;
-    box-shadow: $obr-btn-survol; /* Mêmes valeurs que sur .btn avec une opacité plus faible */
+    box-shadow: $obr-btn-survol;
     transition: opacity .5s;
   }  
   &--form {
     width: 220px;
     margin-top: 30px;
     @include tabl-min {
-      min-width: 219px;
+      min-width: 220px;
       width: 45%;
       margin-top: 35px;
     }
@@ -46,53 +45,74 @@
 }  
 
 .btn-coeur {
+  font-size: 1.5em;
   &:hover {
     &::after {
     transform: scaleY(0);
     }
+    .btn-coeur__vi {
+      opacity: 0;
+    }
+    .btn-coeur__pl {
+      transform: scale(1);
+    }
   } 
-  &::after {
-    @include after;
-    opacity: 1;
-    z-index: 1;
-    display: block;
-    width: 25px;
-    height: 25px;
-    transition: transform 1s;
-    transform: scaleY(1);
-    transform-origin: top;
-  }
-  &--rest {
+  &--accu {
     position: absolute;
-    bottom: 50px;
-    right: 50px;  
+    width: 24px;
+    height: 24px;
+    bottom: 30px;
+    right: 24px;
     &::after {
+      @include after-coeur;
       background: white;
     }
   }
   &--menu {
     position: relative;
-    padding-right: 20px;
-    line-height: 42px;
+    width: 40px;
+    height: 40px;
+    border-radius: calc(#{$br-carte} - 2px);
+    @include desk-min {
+      background: white;
+      box-shadow: 2px 5px 13px -1px rgba(35, 35, 35, 0.13);
+    }  
     &::after {
-      background: $clr-qua;
+      @include after-coeur;
+      top: 9px;
+      left: 8px;
+      @include desk-min {
+        background: white;
+      }  
     }
   }
   &__vi {
-    font-size: 1.5em;
     position: absolute;
     top: 0;
     left: 0;
     font-weight: 100;
     z-index: 2;
+    transition: opacity calc(#{$cr-duree} - 200ms) $cr-cubic;
+    &--menu {
+      top: 9px;
+      left: 8px;
+    }
   }
   &__pl {
-    font-size: 1.5em;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    color: $clr-sec;
+    background: $clr-coeur;
+    background-clip : text;
+    -webkit-background-clip : text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(.92);
+    transition: transform .1s calc(#{$cr-duree} - 200ms);
+    &--menu {
+      top: 9px;
+      left: 8px;
+    }
   }
 }
 
@@ -101,9 +121,12 @@
   left: 0;
   top: 0;  
   font-size: 1.1em;
-  line-height: 63px; /* Correspond à la hauteur du logo avec marges */
+  line-height: 63px; /* Correspond à la hauteur du logo avec les marges; l'élement est centré verticalement avec "top: 0" */
   padding: 0 2% 0 5%; 
   @include desk-min {
     line-height: 134px;
+  }
+  &:hover {
+    color: $clr-sec;
   }
 }

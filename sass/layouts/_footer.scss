@@ -6,17 +6,18 @@ footer {
   background: #353535;
   .ftr-cont {
     width: map-get($larg, bloc);
-    max-width: 1400px;
+    max-width: map-get($larg, max);
     &__titre {
       font-family: $ft-logo;
       color: white;
       font-size: 1.1em;
       margin-bottom: 16px;
+      font-weight: 400;
     }
-    &__ul {
+    &__liste {
       list-style-type: none;
     }
-    &__li {
+    &__elem {
       margin-top: 6px;
     }  
     &__icone {
@@ -26,7 +27,7 @@ footer {
     &__lien {
       font-size: 1em;
       color: white;
-      &--500 {
+      &--fw500 {
         font-weight: 500;
       }
     }

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: $ft-roboto;
   margin: 22px 0 0 0;
   @include desk-min {
     margin-top: 50px;
@@ -11,10 +11,10 @@ a {
   text-decoration: none;
 }
 
-p, figure, h1, h2, h3, ul {
+p, figure, h1, h2, h3, h4, ul, ol {
   margin: 0;
 }
 
-ul, input, button {
+ul, ol, input, button {
   padding: 0;
 }

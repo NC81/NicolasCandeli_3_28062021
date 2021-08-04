@@ -7,6 +7,18 @@
   right: 0;
 }
 
+@mixin after-coeur {
+  @include after;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
+  z-index: 1;
+  transition: transform $cr-duree $cr-cubic;
+  transform: scaleY(1);
+  transform-origin: top;
+  background: $clr-qua;
+} 
+
 @mixin tabl-min {
   @media all and (min-width: map-get($bkpt, tablette)){
     @content;

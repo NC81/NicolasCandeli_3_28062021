@@ -1,23 +1,29 @@
 .sMenu {
   background: $clr-qua;
   padding: 30px map-get($larg, padding) 82px map-get($larg, padding);
-  border-radius: 40px 40px 0 0;
+  border-radius: $br-bloc $br-bloc 0 0;
   height: 100%;
   width: 100%;
-  box-sizing: border-box; /* Pour que max-width contienne le padding */
-  max-width: 1400px; 
+  box-sizing: border-box; /* Pour que max-width prenne en compte le padding */
+  max-width: map-get($larg, max); 
   @include desk-min {
+    animation: appar 1s backwards;
     width: map-get($larg, bloc);
-    border-radius: 40px;
+    border-radius: $br-bloc;
+    background: #f6f6f6e6;
   }
   &__titre {
     display: flex;
     justify-content: space-between;
-    padding: 0 7% 0 5px;
-    background: $clr-qua;
-    border-radius: 30px 30px 0 0;
+    padding: 0 3% 0 5px;
+    @include tabl-min {
+      padding: 0 12px 0 12px;
+    }
+    @include desk-min {
+      padding: 5px 12px 5px 12px;
+    }
     >h1 {
-      font-family: 'Shrikhand';
+      font-family: $ft-logo;
       font-size: 1.8em;
       font-weight: 400;
     }
@@ -36,7 +42,7 @@
   margin-top: 35px;
   @include tabl-min {
     flex: 1 1 338px;
-    max-width: 49%; /* "gap: 2%" diminue la taille des flex-items de 1%, une valeur de 49% permet d'obtenir la même largeur maximum */
+    max-width: 49%; /* "gap: 2%" diminue la taille des deux flex-items de 1%, une valeur de 49% permet d'obtenir la même largeur maximum */
   }
   @include desk-min {
     width: 31%;
@@ -53,61 +59,57 @@
       width: 40px;      
     }
   }
-  &__ul {
+  &__liste {
     list-style-type: none;
     font-weight: 300;   
   }  
-  &__li {  
-    display: flex;
-    box-shadow: $obr-lien;
-    position: relative;
-    border-radius: 16px;
-    background: white;
-    overflow: hidden;
-    box-sizing: border-box;
-    height: 70px;
-    margin-top: 16px;
-    padding: 14px 22px 11px 11px;
-    animation: delai 1s;
-    animation-fill-mode: backwards;
-      @for $n from 1 through 5 {
+}
+
+.menu-plat {
+  box-shadow: $obr-lien;
+  position: relative;
+  border-radius: $br-carte;
+  background: white;
+  overflow: hidden; /* Permet de cacher la coche située à l'extérieur */
+  box-sizing: border-box;
+  margin-top: 16px;
+  padding: 14px 22px 12px 11px;
+  animation: appar 1s backwards;
+   @for $n from 1 through 4 {
+      &--#{$n} {
+        animation-delay: .15s * $n;
+    }
+  }
+  @include desk-min {
+    animation: appar 1s backwards;
+      @for $n from 1 through 4 {
         &--#{$n} {
-          animation-delay: .15s * $n;
+          animation-delay: .4s + .15s * $n;
       }
     }
   }
-}
-
-@keyframes delai {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
- 
-.menu-lien {
-  width: 100%;
   &:hover {
-    .menu-lien__titre {
-      width: calc(100% - 70px);
+    .menu-plat__titre {
+      width: calc(100% - 60px);
     }
     .compo {
-      width: calc(100% - 100px);
+      width: calc(100% - 110px);
     }
     .prix {
-      transform: translateX(-70px)
+      transform: translateX(-60px)
     }
-    .menu-lien__anim {
-      transform: translateX(-70px);
+    .menu-plat__anim {
+      transform: translateX(-60px);
     }
     .verif {
       animation: valid .5s;
-      animation-fill-mode: none;
     }
   }  
   &__titre {
     font-size: 1.1em;
     font-weight: 500;
-    transition: width .6s;
     width: 100%;
+    transition: width .75s;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -117,41 +119,36 @@
     justify-content: space-between;
     margin-right: 6px;
     font-size: .95em;
+    margin-top: 5px;
     >.compo {
       font-weight: 300;
       text-overflow: ellipsis;
       overflow: hidden;
       white-space: nowrap;
-      transition: width .6s;
       width: 100%;
-      margin-top: 5px;
+      transition: width .75s;
     }
     >.prix {
       font-weight: 500;  
-      transition: transform .5s .05s;
+      padding-left: 3px;
+      transition: transform .5s .05s; /* Le délai donne l'impression que l'élément est poussé */
       transform: translateX(0);
     }
   }  
   &__anim {
     position: absolute;
     background: $clr-ter;
-    right: -70px; 
+    right: -60px; 
     top: 0; 
-    width: 70px;
+    width: 60px;
     height: 70px;
     transition: transform .5s;
     transform: translateX(0);
     text-align: center;
     >.verif {
       color: white;
-      font-size: 1.7em;
+      font-size: 1.35em;
       line-height: 70px;
-      transform: rotate(-360deg);
     }
   }
-} 
-
-@keyframes valid {
-  from {transform: rotate(-360deg);}
-  to {transform: rotate(0);}
 }

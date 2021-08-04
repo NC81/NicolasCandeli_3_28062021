@@ -11,12 +11,12 @@
   &__titre {
     margin-bottom: 5px;
   }
-  &__ul {
+  &__liste {
     display: flex;
     flex-direction: column;
     list-style-type: none;
   }  
-  &__li {
+  &__etape {
       margin: 24px 0 0 12px;
   }  
 }

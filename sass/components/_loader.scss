@@ -1,8 +1,8 @@
-.ldr {
+.loader {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: #68686870;
+  background: #000000ab;
   font-family: $ft-logo;
   font-size: 1.9em; /* Correspond à la taille du logo sur mobile */
   left: 0;
@@ -12,23 +12,13 @@
   z-index: 10;   
   justify-content: center;
   align-items: center;
-  animation: loader-visib 3s forwards;
+  animation: loader-vis 3s forwards;
   &__rel {
     position: relative;
     height: 130px;
     width: 130px;
     background: white;
     border-radius: 50%;
-    .ldr-bord {
-      position: absolute;
-      border-radius: 50%;
-      background: rgb(237, 237, 237);
-      height: 114px;
-      width: 114px;
-      z-index: 1;
-      top: 8px;
-      left: 8px;
-    }
     .ldr-lumi {
     position: absolute;
     height: 126px;
@@ -36,23 +26,150 @@
     border-radius: 50%;
     top: 2px;
     left: 2px;
-    opacity: 0;
+    opacity: 0; /* Les disques apparaissent au fur et à mesure */
       &--1 {
-        background: $clr-sec; 
-        animation: appar 600ms forwards;
+        background: $clr-sec;
+        animation: appar 500ms forwards;
       }
       &--2 {
         background: $clr-ter; 
-        animation: appar 600ms .6s forwards;
+        animation: appar 500ms .5s forwards;
       }
       &--3 {
         background: $clr-pri;
-        animation: appar 600ms 1.2s forwards;
+        animation: appar 500ms 1s forwards;
       }
       &--4 {
         background: rgb(255,134,222);
         background: linear-gradient(90deg, rgba(255,134,222,1) 25%, rgba(153,226,208,1) 50%, rgba(147,86,220,1) 75%);
-        animation: appar 200ms 1.8s forwards, rotat-finale 600ms 1.8s;
+        animation: appar 100ms 1.5s forwards, lumi-rotat 600ms 1.5s infinite; /* Sur la version finale, le temps de chargement déterminera la durée de rotation */
+      }
+    }
+    .ldr-plat {
+      position: absolute;
+      z-index: 2;
+      top: 25px;
+      left: 25px;
+      box-sizing: border-box;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: inset 0px 0px 12px -6px rgb(0, 0, 0);
+      &__feui {
+        position: absolute;
+        z-index: 3;
+        &--1 {
+          right: 10px;
+          top: 10px;
+          transform: rotate(-50deg);
+          color: $clr-ter;
+          opacity: 0;
+          animation: appar 150ms .5s forwards, feui-choc2 150ms 1.5s;
+        }
+        &--2 {
+          right: 25px;
+          top: 7px;
+          transform: rotate(-80deg);
+          color: darken($clr-ter, 20);
+          z-index: 4;
+          opacity: 0;
+          animation: appar 150ms .6s forwards, feui-choc1 150ms 1.4s;
+        }
+        &--3 {
+          right: 11px;
+          top: 17px;
+          color: darken($clr-ter, 40);
+          transform: rotate(90deg) rotateY(-30deg);
+          z-index: 4;
+          opacity: 0;
+          animation: appar 250ms .7s forwards, feui-glisse 1300ms 1.6s cubic-bezier(.37,1.25,.92,1) forwards;
+        }
+      }
+      &__rais {
+        position: absolute;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        opacity: 0;
+        z-index: 3;
+        &--1 {
+          right: 28px;
+          top: 58px;
+          transform: rotate(120deg);
+          background: $clr-pri;
+          z-index: 4;
+          width: 12px;
+          height: 12px;
+          animation: appar 100ms 1s forwards, rais-choc 500ms 1.45s cubic-bezier(.13,1.15,.92,1) forwards;
+        }
+        &--2 {
+          right: 60px;
+          top: 15px;
+          transform: rotate(120deg);
+          background: darken($clr-pri, 6);
+          z-index: 4;
+          width: 8.5px;
+          height: 8.5px;
+          animation: appar 50ms .8s forwards, rais-rebond 700ms .8s forwards;
+        }
+        &--3 {
+          right: 48px;
+          top: 60px;
+          transform: rotate(120deg);
+          background: darken($clr-pri, 20);
+          animation: appar 150ms 1.4s forwards;
+        }
+        &--4 {
+          right: 39px;
+          top: 50px;
+          transform: rotate(120deg);
+          background: darken($clr-pri, 35);
+          z-index: 3;
+          animation: appar 100ms 1.1s forwards, rais-roule 400ms 1.1s forwards;
+        }
+        &--5 {
+          right: 55px;
+          top: 20px;
+          transform: rotate(120deg);
+          background: darken($clr-pri, 30);
+          animation: appar 200ms 1.3s forwards;
+        }
+      }
+      &__tart {
+        position: absolute;
+        top: 25px;
+        left: 5px;
+        transform: rotate(210deg);
+        color: lighten($clr-sec, 10);
+        opacity: 0;
+        animation: appar 500ms forwards;
+      }
+      &__ceri {
+        position: absolute;
+        border-radius: 50%;
+        height: 5px;
+        width: 5px;
+        z-index: 4;
+        opacity: 0;
+        &--1 {
+        top: 45px;
+        right: 48px;
+        background: darken($clr-sec, 15);
+        animation: appar 100ms .2s forwards; 
+        }
+        &--2 {
+          top: 43px;
+          right: 58px;
+          background: darken($clr-sec, 37);
+          animation: appar 100ms .25s forwards; 
+        }
+        &--3 {
+          top: 50px;
+          right: 55px;
+          background: darken($clr-sec, 10);
+          animation: appar 100ms .35s forwards; 
+        }
       }
     }
     .ldr-logo {
@@ -71,10 +188,10 @@
         transform: translate(17%, 59%) rotate(-42deg);
       }
       &__m {
-        transform: translate(1%, 30%) rotate(-22deg);
+        transform: translate(1%, 30%) rotate(-25deg);
       }
       &__y {
-        transform: translate(-1%, 17%) rotate(-2deg);
+        transform: translate(-10%, 17%) rotate(-2deg);
       }
       &__f {
         transform: translate(-15%, 19%) rotate(4deg);
@@ -90,182 +207,4 @@
       }
     }
   }
-}
-
-@keyframes loader-visib {
-  from {visibility: visible;}
-  to {visibility: hidden;}
-}
-
-@keyframes appar {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes rotat-finale {
-  from {transform: rotate(0turn);}
-  to {transform: rotate(1turn);}
-}
-
-.ldr-plat {
-  position: absolute;
-  z-index: 2;
-  top: 25px;
-  left: 25px;
-  box-sizing: border-box;
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  background: white;
-  box-shadow: inset 0px 0px 12px -6px rgb(73, 73, 73);
-  .feuille {
-    position: absolute;
-    z-index: 3;
-    &--1 {
-      right: 10px;
-      top: 10px;
-      transform: rotate(-50deg);
-      color: $clr-ter;
-      opacity: 0;
-      animation: appar 150ms .6s forwards, feuille-choc2 150ms 1.65s;
-    }
-    &--2 {
-      right: 25px;
-      top: 7px;
-      transform: rotate(-80deg);
-      color: darken($clr-ter, 20);
-      z-index: 4;
-      opacity: 0;
-      animation: appar 150ms .7s forwards, feuille-choc1 150ms 1.55s; 
-    }
-    &--3 {
-      right: 11px;
-      top: 17px;
-      color: darken($clr-ter, 40);
-      transform: rotate(90deg) rotateY(-30deg);
-      z-index: 4;
-      opacity: 0;
-      animation: appar 300ms .8s forwards, feuille-glisse 1300ms 1.75s cubic-bezier(.37,1.25,.92,1) forwards; 
-    }
-  }
-  .raisin {
-    position: absolute;
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    opacity: 0;
-    z-index: 3;
-    &--1 {
-      right: 28px;
-      top: 58px;
-      transform: rotate(120deg);
-      background: $clr-pri;
-      z-index: 4;
-      width: 12px;
-      height: 12px;
-      animation: appar 100ms 1.2s forwards, raisin-choc 500ms 1.65s cubic-bezier(.13,1.15,.92,1) forwards; 
-    }
-    &--2 {
-      right: 60px;
-      top: 15px;
-      transform: rotate(120deg);
-      background: darken($clr-pri, 10);
-      z-index: 4;
-      width: 8.5px;
-      height: 8.5px;
-      animation: appar 50ms 1s forwards, raisin-rebond 700ms 1s forwards; 
-    }
-    &--3 {
-      right: 48px;
-      top: 60px;
-      transform: rotate(120deg);
-      background: darken($clr-pri, 20);
-      animation: appar 150ms 1.4s forwards; 
-    }
-    &--4 {
-      right: 39px;
-      top: 50px;
-      transform: rotate(120deg);
-      background: darken($clr-pri, 35);
-      z-index: 3;
-      animation: appar 100ms 1.3s forwards, raisin-roule 500ms 1.3s forwards; 
-    }
-    &--5 {
-      right: 55px;
-      top: 20px;
-      transform: rotate(120deg);
-      background: darken($clr-pri, 40);
-      animation: appar 200ms 1.5s forwards; 
-    }
-  }
-  .gateau {
-    position: absolute;
-    top: 25px;
-    left: 5px;
-    transform: rotate(210deg);
-    color: lighten($clr-sec, 10);
-    opacity: 0;
-    animation: appar 400ms forwards; 
-  }
-  .cerise {
-    position: absolute;
-    border-radius: 50%;
-    height: 5px;
-    width: 5px;
-    z-index: 4;
-    opacity: 0;
-    &--1 {
-    top: 45px;
-    right: 48px;
-    background: darken($clr-sec, 15);
-    animation: appar 100ms .2s forwards; 
-    }
-    &--2 {
-      top: 43px;
-      right: 58px;
-      background: darken($clr-sec, 37);
-      animation: appar 100ms .3s forwards; 
-    }
-    &--3 {
-      top: 50px;
-      right: 55px;
-      background: darken($clr-sec, 10);
-      animation: appar 100ms .4s forwards; 
-    }
-  }
-}
-
-@keyframes feuille-glisse {
-  from {transform: translate(0) rotate(90deg) rotateY(-30deg);}
-  to {transform: translate(1px, 3px) rotate(125deg) rotateY(0deg);}
-}
-
-@keyframes feuille-choc1 {
-  0% {transform: rotate(-80deg);}
-  50% {transform: rotate(-76deg);}
-  100% {transform: rotate(-80deg);}
-}
-
-@keyframes feuille-choc2 {
-  0% {transform: rotate(-50deg);}
-  50% {transform: rotate(-46deg);}
-  100% {transform: rotate(-50deg);}
-}
-
-@keyframes raisin-rebond {
-  0% {transform: translate(0);}
-  32% {transform: translate(2px, 14px);}
-  45% {transform: translate(3px, 12px);}
-  55% {transform: translate(5px, 15px);}
-  100% {transform: translate(10px, 15px);}
-}
-
-@keyframes raisin-roule {
-  from {transform: translate(0);}
-  to {transform: translate(4px, 5px);}
-}
-
-@keyframes raisin-choc {
-  from {transform: translate(0);}
-  to {transform: translate(2px, 2px);}
 }
