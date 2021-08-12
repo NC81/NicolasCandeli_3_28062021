@@ -104,8 +104,7 @@
     left: 0;
     z-index: 0;
     background: $clr-coeur;
-    background-clip : text;
-    -webkit-background-clip : text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: scale(.92);
     transition: transform .1s calc(#{$cr-duree} - 200ms);
